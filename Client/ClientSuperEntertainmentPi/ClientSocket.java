@@ -4,7 +4,7 @@ import java.io.IOException;
 import java.net.Socket;
 import java.net.UnknownHostException;
 
-import Client.Configuration_File_Manager.Configuration_File_Manager;
+import Client.ConfigurationFileManager.ConfigurationFileManager;
 import General.Socket_Server_Super_Entertainment_Pi.*;
 
 
@@ -28,9 +28,9 @@ class ClientSocket extends Socket_Network {
         try {
 
             // @debug
-            System.out.println("ClientSocket: read ip: " + Configuration_File_Manager.get_Server_Ip_address() + " read port: " + Configuration_File_Manager.get_Server_Port());
+            System.out.println("ClientSocket: read ip: " + ConfigurationFileManager.getServerIpAddress() + " read port: " + ConfigurationFileManager.getServerPort());
 
-            this.clientSocket = new Socket(Configuration_File_Manager.get_Server_Ip_address(), Integer.parseInt(Configuration_File_Manager.get_Server_Port()));
+            this.clientSocket = new Socket(ConfigurationFileManager.getServerIpAddress(), Integer.parseInt(ConfigurationFileManager.getServerPort()));
         } catch (UnknownHostException e) {
             throw new UnknownHostException();
         } catch (IOException e) {

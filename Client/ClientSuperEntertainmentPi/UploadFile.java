@@ -7,7 +7,7 @@ import java.io.IOException;
 import java.net.InetAddress;
 import java.net.Socket;
 
-import Client.Configuration_File_Manager.Configuration_File_Manager;
+import Client.ConfigurationFileManager.ConfigurationFileManager;
 import General.Backlog_Super_Entertainment_Pi.Backlog_Manager;
 import General.General_Super_Entertainment_Pi.General_Date;
 import General.Socket_Server_Super_Entertainment_Pi.Socket_Network;
@@ -66,7 +66,7 @@ class UploadFile implements Runnable {
     @Override
     public void run() {
         try {
-            InetAddress test = Socket_Network.get_ip_address_in_Inet_format(Configuration_File_Manager.get_Server_Ip_address());
+            InetAddress test = Socket_Network.get_ip_address_in_Inet_format(ConfigurationFileManager.getServerIpAddress());
 
             // @debug
             System.out.println(test.getHostAddress() + "  received " + this.portNumber);

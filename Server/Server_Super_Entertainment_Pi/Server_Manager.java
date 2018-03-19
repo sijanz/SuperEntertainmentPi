@@ -1,12 +1,11 @@
 package Server.Server_Super_Entertainment_Pi;
 
 import java.lang.management.ManagementFactory;
-import java.net.InetAddress;
 import java.net.Socket;
 import java.util.ArrayList;
 import java.util.List;
 
-import Client.Configuration_File_Manager.Configuration_File_Manager;
+import Client.ConfigurationFileManager.ConfigurationFileManager;
 import General.Backlog_Super_Entertainment_Pi.Backlog_Manager;
 import General.General_Super_Entertainment_Pi.General_Date;
 import General.Media_Super_Entertainment_Pi.Media_General;
@@ -94,9 +93,9 @@ public class Server_Manager {
                 (!(XML_Manager.check_if_node_exist(XML_FILE.Configuration, XML_Manager.XML_SUB_NODES.Server_Ip_Adress.toString(), work_file.get_path_of_Configuration_XML_File())))
                 ) {
             String standard_Host = Server_Socket.getIpAddress();
-            Configuration_File_Manager.set_initial_Server_Ip_Adress(standard_Host);
+            ConfigurationFileManager.setInitialServerIpAddress(standard_Host);
             String standard_Port = "6666";
-            Configuration_File_Manager.set_initial_Server_Port(standard_Port);
+            ConfigurationFileManager.setInitialServerPort(standard_Port);
         }
     }
 

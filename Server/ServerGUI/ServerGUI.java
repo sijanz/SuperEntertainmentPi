@@ -1,6 +1,6 @@
 package Server.ServerGUI;
 
-import Client.Configuration_File_Manager.Configuration_File_Manager;
+import Client.ConfigurationFileManager.ConfigurationFileManager;
 
 import javax.swing.*;
 import java.awt.*;
@@ -28,7 +28,7 @@ public class ServerGUI extends Thread {
         // adding the ip label
         JLabel ipLabel = new JLabel("Es konnte keine IP-Addresse bezogen werden, bitte die Netzwerkeinstellungen überprüfen!", SwingConstants.CENTER);
         try {
-            ipLabel.setText("IP-Adresse: " + Configuration_File_Manager.get_Server_Ip_address() + "      Port: " + Configuration_File_Manager.get_Server_Port());
+            ipLabel.setText("IP-Adresse: " + ConfigurationFileManager.getServerIpAddress() + "      Port: " + ConfigurationFileManager.getServerPort());
             ipLabel.setForeground(new Color(198, 5, 60));
         } catch (Exception e) {
             e.printStackTrace();

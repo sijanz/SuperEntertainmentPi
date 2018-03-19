@@ -2,7 +2,7 @@ package Client.ErrorScreen;
 
 import Client.ClientGUI.Controller;
 import Client.ClientSuperEntertainmentPi.ClientManager;
-import Client.Configuration_File_Manager.Configuration_File_Manager;
+import Client.ConfigurationFileManager.ConfigurationFileManager;
 import General.Socket_Server_Super_Entertainment_Pi.Socket_Network;
 import javafx.fxml.FXML;
 import javafx.event.ActionEvent;
@@ -71,9 +71,9 @@ public class Network_Not_Available_Error_Controller extends Controller implement
 
             Socket_Network.set_hostname(host);
 
-            Configuration_File_Manager.set_initial_Server_Port(port);
+            ConfigurationFileManager.setInitialServerPort(port);
 
-            Configuration_File_Manager.set_initial_Server_Ip_Adress(host);
+            ConfigurationFileManager.setInitialServerIpAddress(host);
 
             ClientManager.rebuildSocket();
         } catch (Exception ex) {

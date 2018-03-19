@@ -1,6 +1,6 @@
 package Client.EmbeddedPlayer;
 
-import Client.Configuration_File_Manager.Configuration_File_Manager;
+import Client.ConfigurationFileManager.ConfigurationFileManager;
 import General.XML_Service_Super_Entertainment_Pi.XML_Manager;
 
 import javax.swing.*;
@@ -45,7 +45,7 @@ public class EmbeddedPlayerStarter {
      */
     static String createMrl(XML_Manager.XML_NODES mediaType, String mediaName) {
         String mrl = "smb://";
-        mrl += Configuration_File_Manager.get_Server_Ip_address();
+        mrl += ConfigurationFileManager.getServerIpAddress();
         switch (mediaType) {
             case VIDEO:
                 mrl += "/video/";

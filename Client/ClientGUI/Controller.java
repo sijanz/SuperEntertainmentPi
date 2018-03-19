@@ -1,7 +1,7 @@
 package Client.ClientGUI;
 
 import Client.ClientSuperEntertainmentPi.User;
-import Client.Configuration_File_Manager.Configuration_File_Manager;
+import Client.ConfigurationFileManager.ConfigurationFileManager;
 import javafx.animation.FadeTransition;
 import javafx.event.Event;
 import javafx.fxml.FXML;
@@ -152,7 +152,7 @@ public abstract class Controller {
      * @return the ip address of the server
      */
     private String getServerIp() throws Exception {
-        return Configuration_File_Manager.get_Server_Ip_address();
+        return ConfigurationFileManager.getServerIpAddress();
     }
 
 
