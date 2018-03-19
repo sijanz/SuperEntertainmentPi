@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="MainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="467.0" prefWidth="700.0" stylesheets="@SubMenu.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Client.ClientGUI.PlaylistName">
+   <center>
+        <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+            <children>
+                <Label layoutX="154.0" layoutY="151.0" prefHeight="25.0" prefWidth="393.0" text="Bitte gib einen Namen für die neue Playlist an:">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="namefield" layoutX="154.0" layoutY="219.0" prefHeight="29.0" prefWidth="200.0" promptText="Name der Playlist" />
+                <Button layoutX="410.0" layoutY="219.0" mnemonicParsing="false" onAction="#playlistnameconfirm" text="OK" />
+                <Button layoutX="462.0" layoutY="219.0" mnemonicParsing="false" onAction="#cancel" text="Abbrechen" />
+            </children>
+        </Pane>
+   </center>
+</BorderPane>

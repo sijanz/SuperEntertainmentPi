@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="MainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="467.0" prefWidth="700.0" stylesheets="@../ClientGUI/SubMenu.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Client.ErrorScreen.Network_Not_Available_Error_Controller">
+   <bottom>
+      <BorderPane prefHeight="86.0" prefWidth="700.0" BorderPane.alignment="CENTER">
+         <center>
+            <Label fx:id="errorLabel" textFill="RED" BorderPane.alignment="CENTER" />
+         </center>
+      </BorderPane>
+   </bottom>
+   <center>
+      <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <TextField fx:id="hostfield" layoutX="269.0" layoutY="47.0" promptText="IP-Adresse" />
+            <TextField fx:id="portfield" layoutX="269.0" layoutY="91.0" promptText="Port" />
+            <Button layoutX="332.0" layoutY="138.0" mnemonicParsing="false" onAction="#errordata" text="OK" />
+         </children>
+      </Pane>
+   </center>
+   <top>
+      <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <bottom>
+            <Label text="Bitte gib hier die neuen Verbindungsdaten ein:" BorderPane.alignment="CENTER">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <BorderPane.margin>
+                  <Insets />
+               </BorderPane.margin>
+            </Label>
+         </bottom>
+         <center>
+            <Label text="Es kann keine Verbindung zum Server aufgebaut werden." BorderPane.alignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <BorderPane.margin>
+                  <Insets />
+               </BorderPane.margin>
+            </Label>
+         </center>
+         <top>
+            <ImageView fitHeight="96.0" fitWidth="96.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+               <image>
+                  <Image url="@../images/paomedia-small-n-flat-1a97d15/png/96/shield-warning.png" />
+               </image>
+               <BorderPane.margin>
+                  <Insets top="20.0" />
+               </BorderPane.margin>
+            </ImageView>
+         </top>
+      </BorderPane>
+   </top>
+</BorderPane>

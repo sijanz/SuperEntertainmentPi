@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.media.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane fx:id="MainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="467.0" prefWidth="700.0" stylesheets="@VideoMenu.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Client.ClientGUI.Options">
+    <top>
+        <HBox fx:id="TopPane" alignment="CENTER" prefHeight="30.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+            <children>
+            <Label text="Du:" textFill="WHITE">
+               <HBox.margin>
+                  <Insets right="5.0" />
+               </HBox.margin>
+            </Label>
+                <Label fx:id="ipLabel" text="132.252.124.190" textFill="WHITE">
+               <HBox.margin>
+                  <Insets right="50.0" />
+               </HBox.margin>
+                </Label>
+            <Label text="Server:" textFill="WHITE">
+               <padding>
+                  <Insets right="5.0" />
+               </padding>
+            </Label>
+            <Label fx:id="serverIpLabel" text="132.252.125.103" textFill="WHITE">
+               <HBox.margin>
+                  <Insets right="20.0" />
+               </HBox.margin>
+            </Label>
+            <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/paomedia-small-n-flat-1a97d15/png/24/switch-on.png" />
+               </image>
+               <HBox.margin>
+                  <Insets right="100.0" />
+               </HBox.margin>
+            </ImageView>
+                <Label fx:id="userLabel" text="Simon" textFill="WHITE">
+                    <HBox.margin>
+                        <Insets right="100.0" />
+                    </HBox.margin>
+                    <graphic>
+                        <Label fx:id="profilePicture" prefHeight="19.0" prefWidth="26.0" textFill="WHITE">
+                            <padding>
+                                <Insets right="10.0" />
+                            </padding>
+                        </Label>
+                    </graphic>
+                </Label>
+                <Label fx:id="clockLabel" text="23:59" textFill="WHITE" />
+            </children>
+        </HBox>
+    </top>
+    <center>
+        <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+            <top>
+                <HBox prefHeight="60.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+                    <children>
+                        <Button fx:id="homeButton" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="40.0" minWidth="40.0" mnemonicParsing="false" onAction="#mainMenu">
+                            <HBox.margin>
+                                <Insets bottom="10.0" left="10.0" top="10.0" />
+                            </HBox.margin>
+                        </Button>
+                    </children>
+                </HBox>
+            </top>
+         <center>
+            <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Button layoutX="339.0" layoutY="190.0" mnemonicParsing="false" onAction="#EntryScreen" prefHeight="29.0" prefWidth="91.0" text="Abbrechen" />
+                  <PasswordField fx:id="old" layoutX="269.0" layoutY="60.0" promptText="altes Passwort" />
+                  <PasswordField fx:id="new2" layoutX="269.0" layoutY="140.0" promptText="neues Passwort" />
+                  <PasswordField fx:id="new1" layoutX="269.0" layoutY="100.0" promptText="neues Passwort" />
+                  <Button layoutX="269.0" layoutY="190.0" mnemonicParsing="false" onAction="#checkChangePsw" text="OK" />
+               </children>
+            </Pane>
+         </center>
+         <bottom>
+            <BorderPane prefHeight="148.0" prefWidth="700.0" BorderPane.alignment="CENTER">
+               <center>
+                  <Label fx:id="labelPsw" textFill="RED" BorderPane.alignment="CENTER" />
+               </center>
+            </BorderPane>
+         </bottom>
+        </BorderPane>
+    </center>
+</BorderPane>

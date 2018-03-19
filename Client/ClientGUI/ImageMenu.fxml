@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.media.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane fx:id="MainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="467.0" prefWidth="700.0" stylesheets="@VideoMenu.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Client.ClientGUI.ImageMenu">
+    <top>
+        <HBox fx:id="TopPane" alignment="CENTER" prefHeight="30.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+            <children>
+            <Label text="Du:" textFill="WHITE">
+               <HBox.margin>
+                  <Insets right="5.0" />
+               </HBox.margin>
+            </Label>
+                <Label fx:id="ipLabel" text="132.252.124.190" textFill="WHITE">
+               <HBox.margin>
+                  <Insets right="50.0" />
+               </HBox.margin>
+                </Label>
+            <Label text="Server:" textFill="WHITE">
+               <padding>
+                  <Insets right="5.0" />
+               </padding>
+            </Label>
+            <Label fx:id="serverIpLabel" text="132.252.125.103" textFill="WHITE">
+               <HBox.margin>
+                  <Insets right="20.0" />
+               </HBox.margin>
+            </Label>
+            <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/paomedia-small-n-flat-1a97d15/png/24/switch-on.png" />
+               </image>
+               <HBox.margin>
+                  <Insets right="100.0" />
+               </HBox.margin>
+            </ImageView>
+                <Label fx:id="userLabel" text="Simon" textFill="WHITE">
+                    <HBox.margin>
+                        <Insets right="100.0" />
+                    </HBox.margin>
+                    <graphic>
+                        <Label fx:id="profilePicture" prefHeight="19.0" prefWidth="26.0" textFill="WHITE">
+                            <padding>
+                                <Insets right="10.0" />
+                            </padding>
+                        </Label>
+                    </graphic>
+                </Label>
+                <Label fx:id="clockLabel" text="23:59" textFill="WHITE" />
+            </children>
+        </HBox>
+    </top>
+    <center>
+        <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+            <top>
+                <HBox prefHeight="60.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+                    <children>
+                        <Button fx:id="homeButton" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="40.0" minWidth="40.0" mnemonicParsing="false" onAction="#showMainMenu">
+                            <HBox.margin>
+                                <Insets bottom="10.0" left="10.0" top="10.0" />
+                            </HBox.margin>
+                        </Button>
+                  <MenuButton fx:id="addButton" mnemonicParsing="false" prefHeight="40.0" prefWidth="79.0">
+                    <items>
+                      <MenuItem mnemonicParsing="false" onAction="#addItem" text="Datei hochladen..." />
+                      <MenuItem mnemonicParsing="false" onAction="#addFolder" text="Ordner hochladen..." />
+                        <MenuItem mnemonicParsing="false" onAction="#addItemToPlaylist" text="Datei zu Playlist hinzufügen..." />
+                        <MenuItem fx:id="createPlaylistButton" mnemonicParsing="false" onAction="#createPlaylist" text="Neue Playlist erstellen..." />
+                    </items>
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="150.0" top="10.0" />
+                     </HBox.margin>
+                  </MenuButton>
+                  <MenuButton fx:id="deleteButton" mnemonicParsing="false" prefHeight="40.0" prefWidth="79.0">
+                    <items>
+                      <MenuItem mnemonicParsing="false" onAction="#deleteItem" text="Datei vom Server löschen" />
+                        <MenuItem mnemonicParsing="false" onAction="#deleteItemFromPlaylist" text="Datei aus der Playlist löschen" />
+                      <MenuItem mnemonicParsing="false" onAction="#deletePlaylist" text="Playlist löschen..." />
+                    </items>
+                     <HBox.margin>
+                        <Insets bottom="10.0" top="10.0" />
+                     </HBox.margin>
+                  </MenuButton>
+                  <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="120.0" right="5.0" top="12.0" />
+                     </HBox.margin>
+                     <image>
+                        <Image url="@../images/paomedia-small-n-flat-1a97d15/png/72/search.png" />
+                     </image>
+                  </ImageView>
+                              <TextField fx:id="searchField" nodeOrientation="LEFT_TO_RIGHT" onAction="#showListView" onKeyReleased="#showListView" promptText="Playlist durchsuchen...">
+                     <HBox.margin>
+                        <Insets bottom="10.0" top="15.0" />
+                     </HBox.margin>
+                  </TextField>
+                    </children>
+                </HBox>
+            </top>
+         <left>
+            <BorderPane prefHeight="277.0" prefWidth="318.0" BorderPane.alignment="CENTER">
+               <center>
+                  <ListView fx:id="listView" maxHeight="200.0" minHeight="200.0" onKeyReleased="#showImage" onMouseReleased="#showImage" prefHeight="200.0" prefWidth="327.0" BorderPane.alignment="CENTER">
+                     <contextMenu>
+                        <ContextMenu>
+                          <items>
+                            <MenuItem mnemonicParsing="false" onAction="#contentup" text="Nach oben verschieben" />
+                              <MenuItem mnemonicParsing="false" onAction="#contentdown" text="Nach unten verschieben" />
+                          </items>
+                        </ContextMenu>
+                     </contextMenu></ListView>
+               </center>
+               <BorderPane.margin>
+                  <Insets left="50.0" top="20.0" />
+               </BorderPane.margin>
+               <top>
+                  <Label fx:id="currentPlaylist" text="Aktuelle Playlist" BorderPane.alignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+               </top>
+            </BorderPane>
+         </left>
+         <right>
+            <ImageView fx:id="imageView" fitHeight="200.0" fitWidth="200.0" onMouseClicked="#imagePopup" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+               <BorderPane.margin>
+                  <Insets right="50.0" top="38.0" />
+               </BorderPane.margin>
+            </ImageView>
+         </right>
+        </BorderPane>
+    </center>
+   <bottom>
+      <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <BorderPane prefHeight="100.0" prefWidth="286.0">
+               <center>
+                  <ComboBox fx:id="playlistView" onAction="#showListView" prefHeight="29.0" prefWidth="143.0" BorderPane.alignment="CENTER">
+                     <BorderPane.margin>
+                        <Insets left="10.0" />
+                     </BorderPane.margin>
+                  </ComboBox>
+               </center>
+               <left>
+                  <Label text="Playlist auswählen:" BorderPane.alignment="CENTER">
+                     <BorderPane.margin>
+                        <Insets left="20.0" />
+                     </BorderPane.margin>
+                  </Label>
+               </left>
+            </BorderPane>
+            <Pane prefHeight="100.0" prefWidth="418.0">
+               <children>
+                          <Button fx:id="playButton" alignment="CENTER_RIGHT" layoutX="332.0" layoutY="3.0" maxWidth="-Infinity" minHeight="60.0" minWidth="60.0" mnemonicParsing="false" onAction="#showImageOnPi" prefHeight="95.0" prefWidth="60.0" />
+                  <Button fx:id="slideshowButton" layoutX="259.0" layoutY="21.0" maxWidth="-Infinity" minHeight="60.0" minWidth="60.0" mnemonicParsing="false" onAction="#slideShow" prefHeight="60.0" prefWidth="60.0" />
+               </children>
+            </Pane>
+         </children>
+      </HBox>
+   </bottom>
+</BorderPane>

@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane fx:id="MainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="467.0" prefWidth="700.0" stylesheets="@SubMenu.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Client.ClientGUI.MediaPlay">
+    <top>
+        <HBox fx:id="TopPane" alignment="CENTER" prefHeight="30.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+            <children>
+            <Label text="Du:" textFill="WHITE">
+               <HBox.margin>
+                  <Insets right="5.0" />
+               </HBox.margin>
+            </Label>
+                <Label fx:id="ipLabel" text="132.252.124.190" textFill="WHITE">
+               <HBox.margin>
+                  <Insets right="50.0" />
+               </HBox.margin>
+                </Label>
+            <Label text="Server:" textFill="WHITE">
+               <HBox.margin>
+                  <Insets right="5.0" />
+               </HBox.margin>
+            </Label>
+            <Label fx:id="serverIpLabel" text="132.252.125.103" textFill="WHITE">
+               <HBox.margin>
+                  <Insets right="20.0" />
+               </HBox.margin>
+            </Label>
+            <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+               <HBox.margin>
+                  <Insets right="100.0" />
+               </HBox.margin>
+               <image>
+                  <Image url="@../images/paomedia-small-n-flat-1a97d15/png/24/switch-on.png" />
+               </image>
+            </ImageView>
+                <Label fx:id="userLabel" text="Simon" textFill="WHITE">
+                    <HBox.margin>
+                        <Insets right="100.0" />
+                    </HBox.margin>
+                    <graphic>
+                        <Label fx:id="profilePicture" prefHeight="19.0" prefWidth="26.0" textFill="WHITE">
+                            <padding>
+                                <Insets right="10.0" />
+                            </padding>
+                        </Label>
+                    </graphic>
+                </Label>
+                <Label fx:id="clockLabel" text="23:59" textFill="WHITE" />
+            </children>
+        </HBox>
+    </top>
+    <center>
+        <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+            <top>
+                <HBox prefHeight="60.0" prefWidth="600.0" BorderPane.alignment="CENTER" />
+            </top>
+            <center>
+                <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                    <center>
+                        <ImageView fx:id="mediaSymbol" fitHeight="96.0" fitWidth="96.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+                     <image>
+                        <Image url="@../images/paomedia-small-n-flat-1a97d15/png/96/file-sound.png" />
+                     </image>
+                     <BorderPane.margin>
+                        <Insets bottom="40.0" />
+                     </BorderPane.margin></ImageView>
+                    </center>
+                    <top>
+                        <Label fx:id="mediaNameLabel" text="Label" BorderPane.alignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font></Label>
+                    </top>
+                </BorderPane>
+            </center>
+        </BorderPane>
+    </center>
+    <bottom>
+        <HBox fx:id="buttonPane" alignment="CENTER" prefHeight="65.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+            <children>
+            <Button fx:id="shuffleButton" mnemonicParsing="false" onAction="#shuffle" prefHeight="50.0" prefWidth="50.0">
+               <HBox.margin>
+                  <Insets right="10.0" />
+               </HBox.margin>
+            </Button>
+                <Button fx:id="pauseButton" mnemonicParsing="false" onAction="#pause" prefHeight="50.0" prefWidth="50.0">
+                    <HBox.margin>
+                        <Insets right="10.0" />
+                    </HBox.margin>
+                </Button>
+                  <Button fx:id="stopButton" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="40.0" minWidth="40.0" mnemonicParsing="false" onAction="#showVideoMenu" prefHeight="50.0" prefWidth="50.0">
+                      <HBox.margin>
+                          <Insets right="10.0" />
+                      </HBox.margin>
+                  </Button>
+                <Button fx:id="rewindButton" mnemonicParsing="false" onAction="#rewind" prefHeight="50.0" prefWidth="50.0">
+                    <HBox.margin>
+                        <Insets right="10.0" />
+                    </HBox.margin>
+                </Button>
+                <Button fx:id="fastForwardButton" mnemonicParsing="false" onAction="#fastForward" prefHeight="50.0" prefWidth="50.0">
+                    <HBox.margin>
+                        <Insets right="10.0" />
+                    </HBox.margin>
+                </Button>
+            <Button fx:id="previousItemButton" mnemonicParsing="false" onAction="#playPreviousItem" prefHeight="50.0" prefWidth="50.0">
+               <HBox.margin>
+                  <Insets right="10.0" />
+               </HBox.margin>
+            </Button>
+            <Button fx:id="nextItemButton" mnemonicParsing="false" onAction="#playNextItem" prefHeight="50.0" prefWidth="50.0">
+               <HBox.margin>
+                  <Insets right="10.0" />
+               </HBox.margin>
+            </Button>
+                <Button fx:id="lowerButton" mnemonicParsing="false" onAction="#volumeDown" prefHeight="50.0" prefWidth="50.0">
+                    <HBox.margin>
+                        <Insets right="10.0" />
+                    </HBox.margin>
+                </Button>
+                <Button fx:id="louderButton" mnemonicParsing="false" onAction="#volumeUp" prefHeight="50.0" prefWidth="50.0">
+                    <HBox.margin>
+                        <Insets right="10.0" />
+                    </HBox.margin>
+                </Button>
+            </children>
+        </HBox>
+    </bottom>
+</BorderPane>

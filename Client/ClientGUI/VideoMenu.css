@@ -1,0 +1,103 @@
+#MainPane {
+    -fx-background-image: url("../images/backgroundImage.png");
+}
+
+#TopPane {
+    -fx-background-color: black;
+    -fx-opacity: 0.4;
+}
+
+#profilePicture {
+    -fx-background-image: url("../images/user-id.png");
+    -fx-background-position: center;
+    -fx-background-repeat: no-repeat;
+    -fx-background-color: transparent;
+}
+
+#homeButton {
+    -fx-background-image: url("../images/paomedia-small-n-flat-1a97d15/png/72/house.png");
+    -fx-background-size: 40 40;
+    -fx-background-position: center;
+    -fx-background-repeat: no-repeat;
+    -fx-background-color: transparent;
+}
+
+#homeButton:hover {
+    -fx-background-image: url("../images/paomedia-small-n-flat-1a97d15/png/72/house-hover.png");
+}
+
+#addButton {
+    -fx-background-image: url("../images/paomedia-small-n-flat-1a97d15/png/72/sign-add.png");
+    -fx-background-size: 40 40;
+    -fx-background-position: center;
+    -fx-background-repeat: no-repeat;
+    -fx-background-color: transparent;
+}
+
+#addButton:hover {
+    -fx-background-image: url("../images/paomedia-small-n-flat-1a97d15/png/72/sign-add-hover.png");
+}
+
+#deleteButton {
+    -fx-background-image: url("../images/paomedia-small-n-flat-1a97d15/png/72/sign-delete.png");
+    -fx-background-size: 40 40;
+    -fx-background-position: center;
+    -fx-background-repeat: no-repeat;
+    -fx-background-color: transparent;
+}
+
+#deleteButton:hover {
+    -fx-background-image: url("../images/paomedia-small-n-flat-1a97d15/png/72/sign-delete-hover.png");
+}
+
+#playButton {
+    -fx-background-image: url("../images/paomedia-small-n-flat-1a97d15/png/72/sign-right.png");
+    -fx-background-size: 60 60;
+    -fx-background-position: center;
+    -fx-background-repeat: no-repeat;
+    -fx-background-color: transparent;
+}
+
+#playButton:hover {
+    -fx-background-image: url("../images/paomedia-small-n-flat-1a97d15/png/72/sign-right-hover.png");
+}
+
+#backButton {
+    -fx-background-image: url("../images/paomedia-small-n-flat-1a97d15/png/72/sign-up.png");
+    -fx-background-size: 40 40;
+    -fx-background-position: center;
+    -fx-background-repeat: no-repeat;
+    -fx-background-color: transparent;
+}
+
+#backButton:hover {
+    -fx-background-image: url("../images/paomedia-small-n-flat-1a97d15/png/72/sign-up-hover.png");
+}
+
+#slideshowButton {
+    -fx-background-image: url("../images/slideshow.png");
+    -fx-background-size: 60 60;
+    -fx-background-position: center;
+    -fx-background-repeat: no-repeat;
+    -fx-background-color: transparent;
+}
+
+#slideshowButton:hover {
+    -fx-background-image: url("../images/slideshow-hover.png");
+}
+
+#youtubePlayerButton {
+    -fx-background-image: url("../images/paomedia-small-n-flat-1a97d15/png/72/social-youtube.png");
+    -fx-background-size: 60 60;
+    -fx-background-position: center;
+    -fx-background-repeat: no-repeat;
+    -fx-background-color: transparent;
+}
+
+#youtubePlayerButton:hover {
+    -fx-background-image: url("../images/paomedia-small-n-flat-1a97d15/png/72/social-youtube-hover.png");
+}
+
+#easterEggButton {
+    -fx-background-color: transparent;
+}

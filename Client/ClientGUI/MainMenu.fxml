@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane fx:id="MainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="467.0" minWidth="700.0" prefHeight="400.0" prefWidth="600.0" stylesheets="@MainMenu.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Client.ClientGUI.MainMenu">
+    <center>
+        <GridPane BorderPane.alignment="CENTER">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <BorderPane prefHeight="200.0" prefWidth="200.0">
+                    <center>
+                        <Button fx:id="videoButton" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#showVideoMenu" BorderPane.alignment="CENTER">
+                            <BorderPane.margin>
+                                <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                            </BorderPane.margin>
+                        </Button>
+                    </center>
+                </BorderPane>
+                <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
+                    <center>
+                        <Button fx:id="musicButton" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#showMusicMenu" BorderPane.alignment="CENTER">
+                            <BorderPane.margin>
+                                <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                            </BorderPane.margin>
+                        </Button>
+                    </center>
+                </BorderPane>
+                <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
+                    <center>
+                        <Button fx:id="pictureButton" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#showPictureMenu" BorderPane.alignment="CENTER">
+                            <BorderPane.margin>
+                                <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                            </BorderPane.margin>
+                        </Button>
+                    </center>
+                </BorderPane>
+                <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                    <center>
+                        <Button fx:id="teamButton" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#showTeamMenu" BorderPane.alignment="CENTER">
+                            <BorderPane.margin>
+                                <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                            </BorderPane.margin>
+                        </Button>
+                    </center>
+                </BorderPane>
+                <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2">
+                    <center>
+                        <Button fx:id="settingsButton" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#showSettingsMenu" BorderPane.alignment="CENTER">
+                            <BorderPane.margin>
+                                <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                            </BorderPane.margin>
+                        </Button>
+                    </center>
+                </BorderPane>
+                <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                    <center>
+                        <Button fx:id="exitButton" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#exit" BorderPane.alignment="CENTER">
+                            <BorderPane.margin>
+                                <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                            </BorderPane.margin>
+                        </Button>
+                    </center>
+                </BorderPane>
+            </children>
+        </GridPane>
+    </center>
+    <top>
+        <HBox fx:id="TopPane" alignment="CENTER" prefHeight="30.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+            <children>
+            <Label text="Du:" textFill="WHITE">
+               <HBox.margin>
+                  <Insets right="5.0" />
+               </HBox.margin>
+            </Label>
+                <Label fx:id="ipLabel" text="132.252.124.190" textFill="WHITE">
+                    <HBox.margin>
+                        <Insets right="50.0" />
+                    </HBox.margin>
+                </Label>
+            <Label text="Server:" textFill="WHITE">
+               <HBox.margin>
+                  <Insets right="5.0" />
+               </HBox.margin>
+            </Label>
+            <Label fx:id="serverIpLabel" text="132.252.125.103" textFill="WHITE">
+               <HBox.margin>
+                  <Insets right="20.0" />
+               </HBox.margin>
+            </Label>
+            <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/paomedia-small-n-flat-1a97d15/png/24/switch-on.png" />
+               </image>
+               <HBox.margin>
+                  <Insets right="100.0" />
+               </HBox.margin>
+            </ImageView>
+                <Label fx:id="userLabel" text="Simon" textFill="#f5f5f5">
+                    <HBox.margin>
+                        <Insets right="100.0" />
+                    </HBox.margin>
+                    <graphic>
+                        <Label fx:id="profilePicture" prefHeight="19.0" prefWidth="26.0" textFill="WHITE">
+                            <padding>
+                                <Insets right="10.0" />
+                            </padding>
+                        </Label>
+                    </graphic>
+                </Label>
+                <Label fx:id="clockLabel" text="23:59" textFill="WHITE" />
+            </children>
+        </HBox>
+    </top>
+</BorderPane>

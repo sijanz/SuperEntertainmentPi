@@ -1,0 +1,10 @@
+.idea/
+/bin/
+Backlog/
+Media/
+META-INF/
+myImages/
+out/
+XML_FILES/
+*.iml
+*.log

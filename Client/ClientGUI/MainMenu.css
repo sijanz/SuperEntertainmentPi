@@ -1,0 +1,88 @@
+#MainPane {
+    -fx-background-image: url("../images/backgroundImage.png");
+}
+
+#TopPane {
+    -fx-background-color: black;
+    -fx-opacity: 0.4;
+}
+
+#profilePicture {
+    -fx-background-image: url("../images/user-id.png");
+    -fx-background-position: center;
+    -fx-background-repeat: no-repeat;
+    -fx-background-color: transparent;
+}
+
+#videoButton {
+    -fx-background-image: url("../images/paomedia-small-n-flat-1a97d15/png/72/file-video.png");
+    -fx-background-size: 72 72;
+    -fx-background-position: center;
+    -fx-background-repeat: no-repeat;
+    -fx-background-color: transparent;
+}
+
+/*GIMP -> Colors -> Brightness-Contrast -> Brightness 40*/
+#videoButton:hover {
+    -fx-background-image: url("../images/paomedia-small-n-flat-1a97d15/png/72/file-video-hover.png");
+}
+
+#musicButton {
+    -fx-background-image: url("../images/paomedia-small-n-flat-1a97d15/png/72/file-sound.png");
+    -fx-background-size: 72 72;
+    -fx-background-position: center;
+    -fx-background-repeat: no-repeat;
+    -fx-background-color: transparent;
+}
+
+#musicButton:hover {
+    -fx-background-image: url("../images/paomedia-small-n-flat-1a97d15/png/72/file-sound-hover.png");
+}
+
+#pictureButton {
+    -fx-background-image: url("../images/paomedia-small-n-flat-1a97d15/png/72/file-picture.png");
+    -fx-background-size: 72 72;
+    -fx-background-position: center;
+    -fx-background-repeat: no-repeat;
+    -fx-background-color: transparent;
+}
+
+#pictureButton:hover {
+    -fx-background-image: url("../images/paomedia-small-n-flat-1a97d15/png/72/file-picture-hover.png");
+}
+
+#teamButton {
+    -fx-background-image: url("../images/paomedia-small-n-flat-1a97d15/png/72/profile-group.png");
+    -fx-background-size: 72 72;
+    -fx-background-position: center;
+    -fx-background-repeat: no-repeat;
+    -fx-background-color: transparent;
+}
+
+#teamButton:hover {
+    -fx-background-image: url("../images/paomedia-small-n-flat-1a97d15/png/72/profile-group-hover.png");
+}
+
+#settingsButton {
+    -fx-background-image: url("../images/paomedia-small-n-flat-1a97d15/png/72/wrench-screwdriver.png");
+    -fx-background-size: 72 72;
+    -fx-background-position: center;
+    -fx-background-repeat: no-repeat;
+    -fx-background-color: transparent;
+}
+
+#settingsButton:hover {
+    -fx-background-image: url("../images/paomedia-small-n-flat-1a97d15/png/72/wrench-screwdriver-hover.png");
+}
+
+#exitButton {
+    -fx-background-image: url("../images/paomedia-small-n-flat-1a97d15/png/72/sign-error.png");
+    -fx-background-size: 72 72;
+    -fx-background-position: center;
+    -fx-background-repeat: no-repeat;
+    -fx-background-color: transparent;
+}
+
+#exitButton:hover {
+    -fx-background-image: url("../images/paomedia-small-n-flat-1a97d15/png/72/sign-error-hover.png");
+}

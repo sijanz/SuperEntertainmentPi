@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="MainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="467.0" prefWidth="700.0" stylesheets="@SubMenu.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Client.ClientGUI.PlaylistScreen">
+    <center>
+        <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+            <children>
+                <Label fx:id="label" alignment="CENTER" layoutX="140.0" layoutY="83.0" prefHeight="25.0" prefWidth="421.0" text="Label">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </Label>
+                <Button layoutX="390.0" layoutY="279.0" mnemonicParsing="false" onAction="#ok" text="OK" />
+                <ListView fx:id="playlistselect" layoutX="166.0" layoutY="134.0" prefHeight="116.0" prefWidth="369.0" />
+                <Button layoutX="450.0" layoutY="279.0" mnemonicParsing="false" onAction="#cancel" text="Abbrechen" />
+            </children>
+        </Pane>
+    </center>
+</BorderPane>

@@ -1,0 +1,8 @@
+#MainPane {
+    -fx-background-image: url("../images/backgroundImage.png");
+}
+
+#TopPane {
+    -fx-background-color: black;
+    -fx-opacity: 0.4;
+}

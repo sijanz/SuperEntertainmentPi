@@ -1,0 +1,252 @@
+#MainPane {
+    -fx-background-image: url("../images/backgroundImage.png");
+}
+
+#TopPane {
+    -fx-background-color: black;
+    -fx-opacity: 0.4;
+}
+
+#profilePicture {
+    -fx-background-image: url("../images/user-id.png");
+    -fx-background-position: center;
+    -fx-background-repeat: no-repeat;
+    -fx-background-color: transparent;
+}
+
+#homeButton {
+    -fx-background-image: url("../images/paomedia-small-n-flat-1a97d15/png/72/house.png");
+    -fx-background-size: 40 40;
+    -fx-background-position: center;
+    -fx-background-repeat: no-repeat;
+    -fx-background-color: transparent;
+}
+
+#homeButton:hover {
+    -fx-background-image: url("../images/paomedia-small-n-flat-1a97d15/png/72/house-hover.png");
+}
+
+#listView {
+    -fx-background-color: transparent;
+}
+
+#addButton {
+    -fx-background-image: url("../images/paomedia-small-n-flat-1a97d15/png/72/sign-add.png");
+    -fx-background-size: 40 40;
+    -fx-background-position: center;
+    -fx-background-repeat: no-repeat;
+    -fx-background-color: transparent;
+}
+
+#addButton:hover {
+    -fx-background-image: url("../images/paomedia-small-n-flat-1a97d15/png/72/sign-add-hover.png");
+}
+
+#deleteButton {
+    -fx-background-image: url("../images/paomedia-small-n-flat-1a97d15/png/72/sign-delete.png");
+    -fx-background-size: 40 40;
+    -fx-background-position: center;
+    -fx-background-repeat: no-repeat;
+    -fx-background-color: transparent;
+}
+
+#deleteButton:hover {
+    -fx-background-image: url("../images/paomedia-small-n-flat-1a97d15/png/72/sign-delete-hover.png");
+}
+
+#playButton {
+    -fx-background-image: url("../images/paomedia-small-n-flat-1a97d15/png/72/sign-right.png");
+    -fx-background-size: 60 60;
+    -fx-background-position: center;
+    -fx-background-repeat: no-repeat;
+    -fx-background-color: transparent;
+}
+
+#playButton:hover {
+    -fx-background-image: url("../images/paomedia-small-n-flat-1a97d15/png/72/sign-right-hover.png");
+}
+
+#backButton {
+    -fx-background-image: url("../images/paomedia-small-n-flat-1a97d15/png/72/sign-up.png");
+    -fx-background-size: 40 40;
+    -fx-background-position: center;
+    -fx-background-repeat: no-repeat;
+    -fx-background-color: transparent;
+}
+
+#backButton:hover {
+    -fx-background-image: url("../images/paomedia-small-n-flat-1a97d15/png/72/sign-up-hover.png");
+}
+
+#showRemoteButton {
+    -fx-background-image: url("../images/raspberry-pi-logo.png");
+    -fx-background-size: 96 96;
+    -fx-background-position: center;
+    -fx-background-repeat: no-repeat;
+    -fx-background-color: transparent;
+}
+
+#showRemoteButton:hover {
+    -fx-background-image: url("../images/raspberry-pi-logo-hover.png");
+}
+
+#showLocalButton {
+    -fx-background-image: url("../images/paomedia-small-n-flat-1a97d15/png/96/device-computer.png");
+    -fx-background-size: 96 96;
+    -fx-background-position: center;
+    -fx-background-repeat: no-repeat;
+    -fx-background-color: transparent;
+}
+
+#showLocalButton:hover {
+    -fx-background-image: url("../images/paomedia-small-n-flat-1a97d15/png/96/device-computer-hover.png");
+}
+
+#facebookButton {
+    -fx-background-image: url("../images/paomedia-small-n-flat-1a97d15/png/48/social-facebook.png");
+    -fx-background-size: 32 32;
+    -fx-background-position: center;
+    -fx-background-repeat: no-repeat;
+    -fx-background-color: transparent;
+}
+
+#facebookButton:hover {
+    -fx-background-image: url("../images/paomedia-small-n-flat-1a97d15/png/48/social-facebook-hover.png");
+}
+
+#twitterButton {
+    -fx-background-image: url("../images/paomedia-small-n-flat-1a97d15/png/48/social-twitter.png");
+    -fx-background-size: 32 32;
+    -fx-background-position: center;
+    -fx-background-repeat: no-repeat;
+    -fx-background-color: transparent;
+}
+
+#twitterButton:hover {
+    -fx-background-image: url("../images/paomedia-small-n-flat-1a97d15/png/48/social-twitter-hover.png");
+}
+
+#youtubeButton {
+    -fx-background-image: url("../images/paomedia-small-n-flat-1a97d15/png/48/social-youtube.png");
+    -fx-background-size: 32 32;
+    -fx-background-position: center;
+    -fx-background-repeat: no-repeat;
+    -fx-background-color: transparent;
+}
+
+#youtubeButton:hover {
+    -fx-background-image: url("../images/paomedia-small-n-flat-1a97d15/png/48/social-youtube-hover.png");
+}
+
+#buttonPane {
+    -fx-background-color: #404040;
+    -fx-opacity: 1;
+}
+
+#shuffleButton {
+    -fx-background-image: url("../../Images/shuffle.png");
+    -fx-background-size: 40 40;
+    -fx-background-position: center;
+    -fx-background-repeat: no-repeat;
+    -fx-background-color: transparent;
+}
+
+#shuffleButton:hover {
+    -fx-background-image: url("../../Images/shuffle_hover.png");
+}
+
+#pauseButton {
+    -fx-background-image: url("../../Images/play.png");
+    -fx-background-size: 40 40;
+    -fx-background-position: center;
+    -fx-background-repeat: no-repeat;
+    -fx-background-color: transparent;
+}
+
+#pauseButton:hover {
+    -fx-background-image: url("../../Images/play_hover.png");
+}
+
+#stopButton {
+    -fx-background-image: url("../../Images/stop.png");
+    -fx-background-size: 40 40;
+    -fx-background-position: center;
+    -fx-background-repeat: no-repeat;
+    -fx-background-color: transparent;
+}
+
+#stopButton:hover {
+    -fx-background-image: url("../../Images/stop_hover.png");
+}
+
+#rewindButton {
+    -fx-background-image: url("../../Images/rewind_30.png");
+    -fx-background-size: 40 40;
+    -fx-background-position: center;
+    -fx-background-repeat: no-repeat;
+    -fx-background-color: transparent;
+}
+
+#rewindButton:hover {
+    -fx-background-image: url("../../Images/rewind_30_hover.png");
+}
+
+#fastForwardButton {
+    -fx-background-image: url("../../Images/fast_forward_30.png");
+    -fx-background-size: 40 40;
+    -fx-background-position: center;
+    -fx-background-repeat: no-repeat;
+    -fx-background-color: transparent;
+}
+
+#fastForwardButton:hover  {
+    -fx-background-image: url("../../Images/fast_forward_30_hover.png");
+}
+
+#previousItemButton {
+    -fx-background-image: url("../../Images/previous_item.png");
+    -fx-background-size: 40 40;
+    -fx-background-position: center;
+    -fx-background-repeat: no-repeat;
+    -fx-background-color: transparent;
+}
+
+#previousItemButton:hover {
+    -fx-background-image: url("../../Images/previous_item_hover.png");
+}
+
+#nextItemButton {
+    -fx-background-image: url("../../Images/next_item.png");
+    -fx-background-size: 40 40;
+    -fx-background-position: center;
+    -fx-background-repeat: no-repeat;
+    -fx-background-color: transparent;
+}
+
+#nextItemButton:hover {
+    -fx-background-image: url("../../Images/next_item_hover.png");
+}
+
+#lowerButton {
+    -fx-background-image: url("../../Images/lower.png");
+    -fx-background-size: 40 40;
+    -fx-background-position: center;
+    -fx-background-repeat: no-repeat;
+    -fx-background-color: transparent;
+}
+
+#lowerButton:hover {
+    -fx-background-image: url("../../Images/lower_hover.png");
+}
+
+#louderButton {
+    -fx-background-image: url("../../Images/louder.png");
+    -fx-background-size: 40 40;
+    -fx-background-position: center;
+    -fx-background-repeat: no-repeat;
+    -fx-background-color: transparent;
+}
+
+#louderButton:hover {
+    -fx-background-image: url("../../Images/louder_hover.png");
+}
