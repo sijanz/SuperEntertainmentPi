@@ -1,8 +1,8 @@
 package Client.ClientSuperEntertainmentPi;
 
 import Client.ClientGUI.RemoteCaller;
-import Client.ErrorScreen.Network_Not_Available_Error;
-import Client.ErrorScreen.Network_Not_Available_ErrorStarter;
+import Client.ErrorScreen.NetworkNotAvailableError;
+import Client.ErrorScreen.NetworkNotAvailableErrorStarter;
 import General.XML_Service_Super_Entertainment_Pi.XML_Manager;
 import General.XML_Service_Super_Entertainment_Pi.XML_Shell;
 
@@ -48,7 +48,7 @@ public class ClientManager {
             ClientManager.rebuildSocket();
             ClientManager.closeSocket();
         } catch (IOException e) {
-            new Network_Not_Available_ErrorStarter(Network_Not_Available_Error.class, null);
+            new NetworkNotAvailableErrorStarter(NetworkNotAvailableError.class, null);
         }
     }
 

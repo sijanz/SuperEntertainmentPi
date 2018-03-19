@@ -20,14 +20,14 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 
-public class Network_Not_Available_Error_Controller extends Controller implements Initializable {
+public class NetworkNotAvailableErrorController extends Controller implements Initializable {
 
 
     @FXML
-    TextField hostfield;
+    TextField hostField;
 
     @FXML
-    TextField portfield;
+    TextField portField;
 
     @FXML
     Label errorLabel;
@@ -39,53 +39,43 @@ public class Network_Not_Available_Error_Controller extends Controller implement
     private String host = "";
     private String port = "";
 
-    public void errordata() {
 
-        host = hostfield.getText();
-        port = portfield.getText();
+    public void errorData() {
+        host = hostField.getText();
+        port = portField.getText();
 
         if (!host.equals("") && !port.equals("")) {
-
-
             try {
-
                 setData();
                 System.exit(0);
             } catch (Exception e) {
-
-
                 e.printStackTrace();
             }
-
         }
     }
 
 
     private void setData() throws Exception {
 
+        // @debug
         System.out.println(host + " " + port);
 
         try {
-
             Socket_Network.set_standard_port(Integer.parseInt(port));
-
             Socket_Network.set_hostname(host);
-
             ConfigurationFileManager.setInitialServerPort(port);
-
             ConfigurationFileManager.setInitialServerIpAddress(host);
-
             ClientManager.rebuildSocket();
         } catch (Exception ex) {
             ex.printStackTrace();
-            set_error_label();
+            setErrorLabel();
             throw new Exception();
         }
-
     }
 
+
     @FXML
-    private void offline(ActionEvent event) throws Exception {
+    private void initiateOfflineMode(ActionEvent event) throws Exception {
         Parent parent = FXMLLoader.load(getClass().getResource( "../ClientGUI/MainMenu.fxml"));
         Scene scene = new Scene(parent);
         Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -95,9 +85,10 @@ public class Network_Not_Available_Error_Controller extends Controller implement
         System.out.println("offline modus");
     }
 
-    private void set_error_label() {
-        errorLabel.setText("Die Daten stimmen nicht , bitte wiederholen Sie Ihre Eingabe");
+    private void setErrorLabel() {
+        errorLabel.setText("Die Daten stimmen nicht, bitte wiederholen Sie Ihre Eingabe");
     }
+
 
     @FXML
     private void backToLogin(ActionEvent event) throws Exception {
@@ -108,6 +99,7 @@ public class Network_Not_Available_Error_Controller extends Controller implement
         window.setTitle("Login");
         window.show();
     }
+
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {

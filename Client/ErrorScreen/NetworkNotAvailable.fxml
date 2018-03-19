@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane fx:id="MainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="467.0" prefWidth="700.0" stylesheets="@../ClientGUI/SubMenu.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Client.ErrorScreen.Network_Not_Available_Error_Controller">
+<BorderPane fx:id="MainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="467.0" prefWidth="700.0" stylesheets="@../ClientGUI/SubMenu.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Client.ErrorScreen.NetworkNotAvailableErrorController">
    <bottom>
       <BorderPane prefHeight="86.0" prefWidth="700.0" BorderPane.alignment="CENTER">
          <center>
@@ -19,9 +19,9 @@
    <center>
       <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
          <children>
-            <TextField fx:id="hostfield" layoutX="269.0" layoutY="47.0" promptText="IP-Adresse" />
-            <TextField fx:id="portfield" layoutX="269.0" layoutY="91.0" promptText="Port" />
-            <Button layoutX="332.0" layoutY="138.0" mnemonicParsing="false" onAction="#errordata" text="OK" />
+            <TextField fx:id="hostField" layoutX="269.0" layoutY="47.0" promptText="IP-Adresse" />
+            <TextField fx:id="portField" layoutX="269.0" layoutY="91.0" promptText="Port" />
+            <Button layoutX="332.0" layoutY="138.0" mnemonicParsing="false" onAction="#errorData" text="OK" />
          </children>
       </Pane>
    </center>

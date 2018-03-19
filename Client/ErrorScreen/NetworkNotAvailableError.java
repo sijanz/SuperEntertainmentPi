@@ -7,7 +7,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
-public class Network_Not_Available_Error extends Application {
+public class NetworkNotAvailableError extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
