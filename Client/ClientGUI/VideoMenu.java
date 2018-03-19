@@ -1,6 +1,6 @@
 package Client.ClientGUI;
 
-import Client.Client_Super_Entertainment_Pi.Client_Manager;
+import Client.ClientSuperEntertainmentPi.ClientManager;
 import General.General_Super_Entertainment_Pi.General_File;
 import General.Media_Super_Entertainment_Pi.Media_General;
 import General.XML_Service_Super_Entertainment_Pi.XML_Manager;
@@ -377,7 +377,7 @@ public class VideoMenu extends Controller implements Initializable {
             ClientInterface.addVideo(file);
         }
 
-        if (Client_Manager.retrieveIndex()) {
+        if (ClientManager.retrieveIndex()) {
             setNewSceneOverButton((Stage) addButton.getScene().getWindow(), "VideoMenu", "Videos");
         } else {
             setNewSceneOverButton((Stage) addButton.getScene().getWindow(), "AuthenticationFailed", "Authentifizierung fehlgeschlagen!");
@@ -413,7 +413,7 @@ public class VideoMenu extends Controller implements Initializable {
                 //ClientInterface.deleteFile(XML_Manager.XML_NODES.VIDEO, itemToRemove);
                 ClientInterface.deleteVideo(itemToRemove);
 
-                Client_Manager.retrieveIndex();
+                ClientManager.retrieveIndex();
                 PlaylistControl.UpdateSuperPlaylists();
             } else {
                 errorLabel.setText("Kein Video ausgewählt");
@@ -534,7 +534,7 @@ public class VideoMenu extends Controller implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        //Client_Manager.create_index();
+        //ClientManager.create_index();
         errorLabel.setText("");
 
         try {

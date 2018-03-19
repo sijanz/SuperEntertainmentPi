@@ -1,7 +1,7 @@
 package Client.ClientGUI;
 
-import Client.Client_Super_Entertainment_Pi.Client_Manager;
-import Client.Client_Super_Entertainment_Pi.User;
+import Client.ClientSuperEntertainmentPi.ClientManager;
+import Client.ClientSuperEntertainmentPi.User;
 import General.Error.Error_Handler;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -51,7 +51,7 @@ public class Register extends Controller implements Initializable{
             User.setUsername(nameField.getText());
             User.setPassword(passwordField1.getText());
 
-            if(Client_Manager.register()) {
+            if(ClientManager.register()) {
                 registerResponse("jumpToLogin");
             } else {
                 errorLabel.setText("Bitte versuchen Sie es erneut");

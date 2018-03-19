@@ -1,7 +1,7 @@
 package Client.Configuration_File_Manager;
 
 
-import Client.Client_Super_Entertainment_Pi.Client_Manager;
+import Client.ClientSuperEntertainmentPi.ClientManager;
 import General.General_Super_Entertainment_Pi.General_File;
 import General.General_Super_Entertainment_Pi.General_Purpose;
 import General.XML_Service_Super_Entertainment_Pi.XML_Manager;
@@ -20,7 +20,7 @@ public class Configuration_File_Manager {
 
     static {
 
-        work_file = new XML_Shell(Client_Manager.get_working_directory());
+        work_file = new XML_Shell(ClientManager.getWorkingDirectory());
     }
 
 

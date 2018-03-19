@@ -1,8 +1,8 @@
 package Client.ClientGUI;
 
-import Client.Client_Super_Entertainment_Pi.Client_Manager;
-import Client.Client_Super_Entertainment_Pi.Client_Service;
-import Client.Client_Super_Entertainment_Pi.User;
+import Client.ClientSuperEntertainmentPi.ClientManager;
+import Client.ClientSuperEntertainmentPi.ClientService;
+import Client.ClientSuperEntertainmentPi.User;
 import General.Error.Error_Handler;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -51,10 +51,10 @@ public class Login extends Controller implements Initializable {
         User.setPassword(passwordField.getText());
 
         if (!User.getUsername().equals("") && !User.getPassword().equals("")) {
-            if (Client_Manager.sendCredentials()) {
+            if (ClientManager.sendCredentials()) {
 
                 // set token
-                User.setToken(Client_Service.get_last_Message_from_Server());
+                User.setToken(ClientService.getLastMessageFromServer());
 
                 loginResponse("valid");
             } else {

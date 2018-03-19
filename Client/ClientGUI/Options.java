@@ -1,14 +1,9 @@
 package Client.ClientGUI;
 
-import Client.Client_Super_Entertainment_Pi.Client_Manager;
-import Client.Client_Super_Entertainment_Pi.User;
+import Client.ClientSuperEntertainmentPi.ClientManager;
+import Client.ClientSuperEntertainmentPi.User;
 import Client.EasterEgg.EasterEgg;
-import Client.EmbeddedPlayer.EmbeddedPlayerStarter;
-import General.XML_Service_Super_Entertainment_Pi.XML_Manager;
 import javafx.fxml.FXML;
-import Client.Client_Super_Entertainment_Pi.Client_Service;
-import General.General_Super_Entertainment_Pi.General_Purpose;
-import General.XML_Service_Super_Entertainment_Pi.XML_Manager.XML_SUB_NODES;
 import javafx.event.ActionEvent;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
@@ -55,14 +50,14 @@ public class Options extends Controller implements Initializable {
     //delete current account
     @FXML
     private void deleteAcc(ActionEvent event) throws Exception {
-        Client_Manager.deleteUser();
+        ClientManager.deleteUser();
         setNewScene(event, "Login", "Login");
     }
 
     //logout user and go to login screen
     @FXML
     private void logout(ActionEvent event) throws Exception {
-        Client_Manager.logout();
+        ClientManager.logout();
         setNewScene(event, "Login", "Login");
     }
 
@@ -72,7 +67,7 @@ public class Options extends Controller implements Initializable {
         // if new1 and new2 match
         if (new1.getText().equals(new2.getText())) {
 
-            Client_Manager.changePassword(new1.getText());
+            ClientManager.changePassword(new1.getText());
 
             passwordFlag = false;
             setNewScene(event, "OptionsEntry", "Einstellungen");

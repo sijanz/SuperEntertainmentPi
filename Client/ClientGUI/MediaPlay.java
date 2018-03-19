@@ -1,11 +1,10 @@
 package Client.ClientGUI;
 
-import Client.Client_Super_Entertainment_Pi.Client_Manager;
+import Client.ClientSuperEntertainmentPi.ClientManager;
 import General.XML_Service_Super_Entertainment_Pi.XML_Manager;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.Tooltip;
 import javafx.scene.layout.BorderPane;
@@ -145,7 +144,7 @@ public class MediaPlay extends Controller implements Initializable {
 
     @FXML
     private void showVideoMenu(ActionEvent event) throws Exception {
-        if (Client_Manager.retrieveIndex()) {
+        if (ClientManager.retrieveIndex()) {
             switch (mediaType) {
                 case VIDEO:
                     ClientInterface.stopVideo();

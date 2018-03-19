@@ -1,6 +1,6 @@
 package Client.ClientGUI;
 
-import Client.Client_Super_Entertainment_Pi.Client_Manager;
+import Client.ClientSuperEntertainmentPi.ClientManager;
 import Client.EmbeddedPlayer.EmbeddedPlayerStarter;
 import General.XML_Service_Super_Entertainment_Pi.XML_Manager;
 import javafx.event.ActionEvent;
@@ -72,7 +72,7 @@ public class ChooseOutputMenu extends Controller implements Initializable {
      */
     @FXML
     private void showMediaMenu(ActionEvent event) throws Exception {
-        if (Client_Manager.retrieveIndex()) {
+        if (ClientManager.retrieveIndex()) {
             switch (mediaType) {
                 case VIDEO:
                     setNewScene(event, "VideoMenu", "Videos");

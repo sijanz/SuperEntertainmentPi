@@ -1,7 +1,6 @@
 package Client.ClientGUI;
 
-import Client.Client_Super_Entertainment_Pi.Client_Manager;
-import Client.Client_Super_Entertainment_Pi.Client_Service;
+import Client.ClientSuperEntertainmentPi.ClientManager;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -38,7 +37,7 @@ public class MainMenu extends Controller implements Initializable {
 
     @FXML
     private void showVideoMenu(ActionEvent event) throws Exception {
-        if (Client_Manager.retrieveIndex()) {
+        if (ClientManager.retrieveIndex()) {
             setNewScene(event, "VideoMenu", "Videos");
         } else {
             setNewScene(event, "AuthenticationFailed", "Authentifizierung fehlgeschlagen!");
@@ -47,7 +46,7 @@ public class MainMenu extends Controller implements Initializable {
 
     @FXML
     private void showMusicMenu(ActionEvent event) throws Exception {
-        if (Client_Manager.retrieveIndex()) {
+        if (ClientManager.retrieveIndex()) {
             setNewScene(event, "AudioMenu", "Musik");
         } else {
             setNewScene(event, "AuthenticationFailed", "Authentifizierung fehlgeschlagen!");
@@ -56,7 +55,7 @@ public class MainMenu extends Controller implements Initializable {
 
     @FXML
     private void showPictureMenu(ActionEvent event) throws Exception {
-        if (Client_Manager.retrieveIndex()) {
+        if (ClientManager.retrieveIndex()) {
             setNewScene(event, "ImageMenu", "Bilder");
         } else {
             setNewScene(event, "AuthenticationFailed", "Authentifizierung fehlgeschlagen!");
@@ -75,7 +74,7 @@ public class MainMenu extends Controller implements Initializable {
 
     @FXML
     public void exit() throws Exception {
-        Client_Manager.logout();
+        ClientManager.logout();
         System.exit(0);
     }
 

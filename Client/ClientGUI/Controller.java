@@ -1,6 +1,6 @@
 package Client.ClientGUI;
 
-import Client.Client_Super_Entertainment_Pi.User;
+import Client.ClientSuperEntertainmentPi.User;
 import Client.Configuration_File_Manager.Configuration_File_Manager;
 import javafx.animation.FadeTransition;
 import javafx.event.Event;

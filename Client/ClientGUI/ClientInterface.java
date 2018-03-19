@@ -1,7 +1,7 @@
 package Client.ClientGUI;
 
-import Client.Client_Super_Entertainment_Pi.Client_Manager;
-import Client.Client_Super_Entertainment_Pi.Client_Service;
+import Client.ClientSuperEntertainmentPi.ClientManager;
+import Client.ClientSuperEntertainmentPi.ClientService;
 import General.General_Super_Entertainment_Pi.General_File;
 import General.General_Super_Entertainment_Pi.General_Purpose;
 import General.XML_Service_Super_Entertainment_Pi.XML_Manager;
@@ -93,13 +93,13 @@ class ClientInterface {
 
         XML_Manager.append_new_Message(XML_NODES.COMMAND, XML_SUB_NODES.Delete, XML_Shell.get_path_of_communication_XML_File(), videoName);
 
-        Client_Manager.re_build_socket();
+        ClientManager.rebuildSocket();
 
         // send XML file to server
-        Client_Service.send_message_to_server(Client_Manager.get_Client_Socket(), General_File.return_content_of_file(XML_Shell.get_path_of_communication_XML_File()));
+        ClientService.sendMessageToServer(ClientManager.getClientSocket(), General_File.return_content_of_file(XML_Shell.get_path_of_communication_XML_File()));
 
         // wait for confirmation
-       // Client_Service.receiveMessageFromServer(Client_Manager.get_Client_Socket());
+       // ClientService.receiveMessageFromServer(ClientManager.getClientSocket());
     }
 
 
@@ -131,21 +131,21 @@ class ClientInterface {
         System.out.println(General_File.return_content_of_file(XML_Shell.get_path_of_communication_XML_File()) + " <  ------ " + XML_Shell.get_path_of_communication_XML_File());
 
         // rebuild socket
-        Client_Manager.re_build_socket();
+        ClientManager.rebuildSocket();
 
         // send XML file to server
-        Client_Service.send_message_to_server(Client_Manager.get_Client_Socket(), General_File.return_content_of_file(XML_Shell.get_path_of_communication_XML_File()));
+        ClientService.sendMessageToServer(ClientManager.getClientSocket(), General_File.return_content_of_file(XML_Shell.get_path_of_communication_XML_File()));
 
         // wait for confirmation
-        Client_Service.receiveMessageFromServer(Client_Manager.get_Client_Socket());
+        ClientService.receiveMessageFromServer(ClientManager.getClientSocket());
 
         // upload
-        Client_Service.manage_upload(Client_Service.get_last_Message_from_Server(), media.getPath());
+        ClientService.manageUpload(ClientService.getLastMessageFromServer(), media.getPath());
 
-        Client_Manager.close_socket();
+        ClientManager.closeSocket();
 
         // get new index
-        //  Client_Manager.create_index();
+        //  ClientManager.create_index();
     }
 
 
@@ -168,10 +168,10 @@ class ClientInterface {
         System.out.println(General_File.return_content_of_file(XML_Shell.get_path_of_communication_XML_File()));
 
         // rebuild socket
-        Client_Manager.re_build_socket();
+        ClientManager.rebuildSocket();
 
         // send message to server
-        Client_Service.send_message_to_server(Client_Manager.get_Client_Socket(), General_File.return_content_of_file(XML_Shell.get_path_of_communication_XML_File()));
+        ClientService.sendMessageToServer(ClientManager.getClientSocket(), General_File.return_content_of_file(XML_Shell.get_path_of_communication_XML_File()));
     }
 
 
@@ -193,10 +193,10 @@ class ClientInterface {
         System.out.println(General_File.return_content_of_file(XML_Shell.get_path_of_communication_XML_File()));
 
         // rebuild socket
-        Client_Manager.re_build_socket();
+        ClientManager.rebuildSocket();
 
         // send message to server
-        Client_Service.send_message_to_server(Client_Manager.get_Client_Socket(), General_File.return_content_of_file(XML_Shell.get_path_of_communication_XML_File()));
+        ClientService.sendMessageToServer(ClientManager.getClientSocket(), General_File.return_content_of_file(XML_Shell.get_path_of_communication_XML_File()));
     }
 
 

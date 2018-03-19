@@ -1,6 +1,6 @@
 package Client.ClientGUI;
 
-import Client.Client_Super_Entertainment_Pi.Client_Manager;
+import Client.ClientSuperEntertainmentPi.ClientManager;
 import General.General_Super_Entertainment_Pi.General_File;
 import General.XML_Service_Super_Entertainment_Pi.XML_Manager;
 import General.XML_Service_Super_Entertainment_Pi.XML_Shell;
@@ -323,7 +323,7 @@ public class AudioMenu extends Controller implements Initializable {
             ClientInterface.addAudio(file);
         }
 
-        if (Client_Manager.retrieveIndex()) {
+        if (ClientManager.retrieveIndex()) {
             setNewSceneOverButton((Stage)addButton.getScene().getWindow(), "AudioMenu", "Musik");
         } else {
             setNewSceneOverButton((Stage)addButton.getScene().getWindow(), "AuthenticationFailed", "Authentifizierung fehlgeschlagen!");
@@ -357,7 +357,7 @@ public class AudioMenu extends Controller implements Initializable {
                 //ClientInterface.deleteFile(XML_Manager.XML_NODES.AUDIO, itemToRemove);
                 ClientInterface.deleteAudio(itemToRemove);
 
-                Client_Manager.retrieveIndex();
+                ClientManager.retrieveIndex();
                 PlaylistControl.UpdateSuperPlaylists();
             } else {
                 errorLabel.setText("Kein Titel ausgewählt");
