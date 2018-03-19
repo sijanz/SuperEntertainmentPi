@@ -8,7 +8,7 @@ import java.net.InetAddress;
 import java.net.Socket;
 
 import Client.ConfigurationFileManager.ConfigurationFileManager;
-import General.BacklogManagement.BacklogManager;
+import General.Backlog.BacklogManager;
 import General.General_Super_Entertainment_Pi.General_Date;
 import General.Socket_Server_Super_Entertainment_Pi.Socket_Network;
 
