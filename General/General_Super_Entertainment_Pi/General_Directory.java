@@ -6,7 +6,7 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
-import General.Backlog_Super_Entertainment_Pi.Backlog_Manager;
+import General.BacklogManagement.BacklogManager;
 
 
 /**
@@ -136,11 +136,11 @@ public class General_Directory {
 
         if (theDir.mkdirs()) {
 
-            Backlog_Manager.write_to_backlog_file("succeeeded to create " + path);
+            BacklogManager.writeToBacklogFile("succeeeded to create " + path);
 
         } else {
 
-            Backlog_Manager.write_to_backlog_file("failed to create " + path);
+            BacklogManager.writeToBacklogFile("failed to create " + path);
 
         }
     }

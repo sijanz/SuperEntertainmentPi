@@ -9,7 +9,7 @@ import java.nio.file.Paths;
 
 import static java.nio.file.StandardCopyOption.*;
 
-import General.Backlog_Super_Entertainment_Pi.Backlog_Manager;
+import General.BacklogManagement.BacklogManager;
 
 
 /**
@@ -121,7 +121,7 @@ public class General_File {
             return content;
 
         } catch (IOException e) {
-            Backlog_Manager.write_to_backlog_file("///////NO File at "  + file_path + " to read at " + General_Date.get_Date_and_Time());
+            BacklogManager.writeToBacklogFile("///////NO File at "  + file_path + " to read at " + General_Date.get_Date_and_Time());
 
             return "";
         }

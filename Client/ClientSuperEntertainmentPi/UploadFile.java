@@ -8,7 +8,7 @@ import java.net.InetAddress;
 import java.net.Socket;
 
 import Client.ConfigurationFileManager.ConfigurationFileManager;
-import General.Backlog_Super_Entertainment_Pi.Backlog_Manager;
+import General.BacklogManagement.BacklogManager;
 import General.General_Super_Entertainment_Pi.General_Date;
 import General.Socket_Server_Super_Entertainment_Pi.Socket_Network;
 
@@ -74,21 +74,21 @@ class UploadFile implements Runnable {
             this.socketToUpload = new Socket(test.getHostAddress(), this.portNumber);
 
         } catch (IOException e1) {
-            Backlog_Manager.write_to_backlog_file("Cannot build Socket at " + General_Date.get_Date_and_Time());
+            BacklogManager.writeToBacklogFile("Cannot build Socket at " + General_Date.get_Date_and_Time());
             e1.printStackTrace();
         }
 
         try {
             this.upload();
         } catch (IOException io) {
-            Backlog_Manager.write_to_backlog_file("File Upload fails at " + General_Date.get_Date_and_Time() + " File was at " + this.pathToFileToUpload);
+            BacklogManager.writeToBacklogFile("File Upload fails at " + General_Date.get_Date_and_Time() + " File was at " + this.pathToFileToUpload);
         }
 
         try {
             this.socketToUpload.close();
         } catch (IOException e) {
             e.printStackTrace();
-            Backlog_Manager.write_to_backlog_file("Cannot close socket at " + General_Date.get_Date_and_Time());
+            BacklogManager.writeToBacklogFile("Cannot close socket at " + General_Date.get_Date_and_Time());
 
         }
 

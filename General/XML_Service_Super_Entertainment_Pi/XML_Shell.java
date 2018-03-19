@@ -5,7 +5,7 @@
 
 package General.XML_Service_Super_Entertainment_Pi;
 
-import General.Backlog_Super_Entertainment_Pi.Backlog_Manager;
+import General.BacklogManagement.BacklogManager;
 import General.General_Super_Entertainment_Pi.General_Directory;
 import General.General_Super_Entertainment_Pi.General_File;
 
@@ -940,7 +940,7 @@ public class XML_Shell {
 
 
         } catch (ParserConfigurationException | SAXException | IOException ex) {
-            Backlog_Manager.write_to_backlog_file("///// Cannot delete Node " + Name_of_the_node_that_will_be_deleted + " : " + message_that_will_be_deleted);
+            BacklogManager.writeToBacklogFile("///// Cannot delete Node " + Name_of_the_node_that_will_be_deleted + " : " + message_that_will_be_deleted);
         }
 
     }

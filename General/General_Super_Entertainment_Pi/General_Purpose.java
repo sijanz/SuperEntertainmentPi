@@ -12,7 +12,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-import General.Backlog_Super_Entertainment_Pi.Backlog_Manager;
+import General.BacklogManagement.BacklogManager;
 import General.Media_Super_Entertainment_Pi.Media_General;
 import General.XML_Service_Super_Entertainment_Pi.XML_Manager;
 import General.XML_Service_Super_Entertainment_Pi.XML_Shell;
@@ -94,7 +94,7 @@ public class General_Purpose {
             General_File.create_file(path_of_lock);
 
         } catch (IOException e) {
-            Backlog_Manager.write_to_backlog_file("//// Cannot build " + path_of_lock + "  " + General_Date.get_Date_and_Time());
+            BacklogManager.writeToBacklogFile("//// Cannot build " + path_of_lock + "  " + General_Date.get_Date_and_Time());
             e.printStackTrace();
         }
     }

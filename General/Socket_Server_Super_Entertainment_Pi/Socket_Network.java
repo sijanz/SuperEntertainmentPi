@@ -13,7 +13,7 @@ import java.net.UnknownHostException;
 import java.util.HashMap;
 import java.util.Random;
 
-import General.Backlog_Super_Entertainment_Pi.Backlog_Manager;
+import General.BacklogManagement.BacklogManager;
 
 
 /**
@@ -150,13 +150,13 @@ public class Socket_Network extends Socket {
 
             return true;
         } catch (IOException e) {
-            Backlog_Manager.write_to_backlog_file("///// Cannot close socket on Port " + port);
+            BacklogManager.writeToBacklogFile("///// Cannot close socket on Port " + port);
         } finally {
             if (test_port_availability != null) {
                 try {
                     test_port_availability.close();
                 } catch (IOException e) {
-                    Backlog_Manager.write_to_backlog_file("///// Cannot close socket on Port " + port);
+                    BacklogManager.writeToBacklogFile("///// Cannot close socket on Port " + port);
                 }
             }
         }

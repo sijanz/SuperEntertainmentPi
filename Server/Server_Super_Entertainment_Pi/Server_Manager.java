@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import Client.ConfigurationFileManager.ConfigurationFileManager;
-import General.Backlog_Super_Entertainment_Pi.Backlog_Manager;
+import General.BacklogManagement.BacklogManager;
 import General.General_Super_Entertainment_Pi.General_Date;
 import General.Media_Super_Entertainment_Pi.Media_General;
 import General.XML_Service_Super_Entertainment_Pi.XML_Manager;
@@ -41,7 +41,7 @@ public class Server_Manager {
 
         Media_General.init_media_archives();
 
-        Backlog_Manager.init_backlog();
+        BacklogManager.initializeBacklog();
 
         DatabaseManager.initializeDatabase();
 
@@ -67,12 +67,12 @@ public class Server_Manager {
                     Socket connection_to_a_Client = serv_Socket.listen_on_port();
 
                     try {
-                        Backlog_Manager.write_to_backlog_file("////Connection details ");
-                        Backlog_Manager.write_to_backlog_file("Connected at " + General_Date.get_Date_and_Time());
-                        Backlog_Manager.write_to_backlog_file(
+                        BacklogManager.writeToBacklogFile("////Connection details ");
+                        BacklogManager.writeToBacklogFile("Connected at " + General_Date.get_Date_and_Time());
+                        BacklogManager.writeToBacklogFile(
                                 "Connected on " + serv_Socket.get_ip_address() + " " + serv_Socket.get_portnumber());
-                        Backlog_Manager
-                                .write_to_backlog_file("Connected with pid  " + ManagementFactory.getRuntimeMXBean().getName());
+                        BacklogManager
+                                .writeToBacklogFile("Connected with pid  " + ManagementFactory.getRuntimeMXBean().getName());
 
 
                         new Thread(new Server_Service(connection_to_a_Client)).start();

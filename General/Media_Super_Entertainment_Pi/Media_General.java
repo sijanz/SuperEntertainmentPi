@@ -2,7 +2,7 @@ package General.Media_Super_Entertainment_Pi;
 
 import java.util.*;
 
-import General.Backlog_Super_Entertainment_Pi.Backlog_Manager;
+import General.BacklogManagement.BacklogManager;
 import General.General_Super_Entertainment_Pi.CharacterIterator;
 import General.General_Super_Entertainment_Pi.General_Directory;
 import General.XML_Service_Super_Entertainment_Pi.XML_Manager.XML_NODES;
@@ -70,12 +70,12 @@ public class Media_General {
                     String format_to_check = tmp_format.reverse().toString();
 
                     if (!(check_if_format_exists(format_to_check, format))) {
-                        Backlog_Manager.write_to_backlog_file("////// Format " + format_to_check + " does not exist ");
+                        BacklogManager.writeToBacklogFile("////// Format " + format_to_check + " does not exist ");
                     }
                 }
             }
         } catch (Exception ex) {
-            Backlog_Manager.write_to_backlog_file("//// Cannot determine media format ");
+            BacklogManager.writeToBacklogFile("//// Cannot determine media format ");
         }
         return format[0];
     }
