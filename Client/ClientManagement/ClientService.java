@@ -1,4 +1,4 @@
-package Client.ClientSuperEntertainmentPi;
+package Client.ClientManagement;
 
 import java.io.*;
 
@@ -100,8 +100,8 @@ public class ClientService extends Thread {
             General_File.delete_file(XML_Shell.get_path_of_communication_XML_File());
         }
         XML_Manager.create_Message(workFile, XML_FILE.Communication, XML_NODES.Get_Index, XML_Shell.get_path_of_communication_XML_File());
-        XML_Manager.append_new_Message(workFile, XML_FILE.Communication, XML_NODES.Get_Index, XML_Manager.XML_SUB_NODES.name, Client.ClientSuperEntertainmentPi.User.getUsername());
-        XML_Manager.append_new_Message(workFile, XML_FILE.Communication, XML_NODES.Get_Index, XML_Manager.XML_SUB_NODES.token, Client.ClientSuperEntertainmentPi.User.getToken());
+        XML_Manager.append_new_Message(workFile, XML_FILE.Communication, XML_NODES.Get_Index, XML_Manager.XML_SUB_NODES.name, Client.ClientManagement.User.getUsername());
+        XML_Manager.append_new_Message(workFile, XML_FILE.Communication, XML_NODES.Get_Index, XML_Manager.XML_SUB_NODES.token, Client.ClientManagement.User.getToken());
         return General_File.return_content_of_file(XML_Shell.get_path_of_communication_XML_File());
     }
 
@@ -116,8 +116,8 @@ public class ClientService extends Thread {
             General_File.delete_file(XML_Shell.get_path_of_communication_XML_File());
         }
         XML_Manager.create_Message(workFile, XML_FILE.Communication, XML_NODES.Login, XML_Shell.get_path_of_communication_XML_File());
-        XML_Manager.append_new_Message(workFile, XML_FILE.Communication, XML_NODES.Login, XML_Manager.XML_SUB_NODES.name, Client.ClientSuperEntertainmentPi.User.getUsername());
-        XML_Manager.append_new_Message(workFile, XML_FILE.Communication, XML_NODES.Login, XML_Manager.XML_SUB_NODES.password, Client.ClientSuperEntertainmentPi.User.getPassword());
+        XML_Manager.append_new_Message(workFile, XML_FILE.Communication, XML_NODES.Login, XML_Manager.XML_SUB_NODES.name, Client.ClientManagement.User.getUsername());
+        XML_Manager.append_new_Message(workFile, XML_FILE.Communication, XML_NODES.Login, XML_Manager.XML_SUB_NODES.password, Client.ClientManagement.User.getPassword());
         return General_File.return_content_of_file(XML_Shell.get_path_of_communication_XML_File());
     }
 
@@ -132,7 +132,7 @@ public class ClientService extends Thread {
             General_File.delete_file(XML_Shell.get_path_of_communication_XML_File());
         }
         XML_Manager.create_Message(workFile, XML_FILE.Communication, XML_NODES.Logout, XML_Shell.get_path_of_communication_XML_File());
-        XML_Manager.append_new_Message(workFile, XML_FILE.Communication, XML_NODES.Logout, XML_Manager.XML_SUB_NODES.name, Client.ClientSuperEntertainmentPi.User.getUsername());
+        XML_Manager.append_new_Message(workFile, XML_FILE.Communication, XML_NODES.Logout, XML_Manager.XML_SUB_NODES.name, Client.ClientManagement.User.getUsername());
         return General_File.return_content_of_file(XML_Shell.get_path_of_communication_XML_File());
     }
 
@@ -147,8 +147,8 @@ public class ClientService extends Thread {
             General_File.delete_file(XML_Shell.get_path_of_communication_XML_File());
         }
         XML_Manager.create_Message(workFile, XML_FILE.Communication, XML_NODES.Register, XML_Shell.get_path_of_communication_XML_File());
-        XML_Manager.append_new_Message(workFile, XML_FILE.Communication, XML_NODES.Register, XML_Manager.XML_SUB_NODES.name, Client.ClientSuperEntertainmentPi.User.getUsername());
-        XML_Manager.append_new_Message(workFile, XML_FILE.Communication, XML_NODES.Register, XML_Manager.XML_SUB_NODES.password, Client.ClientSuperEntertainmentPi.User.getPassword());
+        XML_Manager.append_new_Message(workFile, XML_FILE.Communication, XML_NODES.Register, XML_Manager.XML_SUB_NODES.name, Client.ClientManagement.User.getUsername());
+        XML_Manager.append_new_Message(workFile, XML_FILE.Communication, XML_NODES.Register, XML_Manager.XML_SUB_NODES.password, Client.ClientManagement.User.getPassword());
         return General_File.return_content_of_file(XML_Shell.get_path_of_communication_XML_File());
     }
 
@@ -163,7 +163,7 @@ public class ClientService extends Thread {
             General_File.delete_file(XML_Shell.get_path_of_communication_XML_File());
         }
         XML_Manager.create_Message(workFile, XML_FILE.Communication, XML_NODES.Delete_User, XML_Shell.get_path_of_communication_XML_File());
-        XML_Manager.append_new_Message(workFile, XML_FILE.Communication, XML_NODES.Delete_User, XML_Manager.XML_SUB_NODES.name, Client.ClientSuperEntertainmentPi.User.getUsername());
+        XML_Manager.append_new_Message(workFile, XML_FILE.Communication, XML_NODES.Delete_User, XML_Manager.XML_SUB_NODES.name, Client.ClientManagement.User.getUsername());
         return General_File.return_content_of_file(XML_Shell.get_path_of_communication_XML_File());
     }
 
@@ -178,7 +178,7 @@ public class ClientService extends Thread {
             General_File.delete_file(XML_Shell.get_path_of_communication_XML_File());
         }
         XML_Manager.create_Message(workFile, XML_FILE.Communication, XML_NODES.Change_Password, XML_Shell.get_path_of_communication_XML_File());
-        XML_Manager.append_new_Message(workFile, XML_FILE.Communication, XML_NODES.Change_Password, XML_Manager.XML_SUB_NODES.name, Client.ClientSuperEntertainmentPi.User.getUsername());
+        XML_Manager.append_new_Message(workFile, XML_FILE.Communication, XML_NODES.Change_Password, XML_Manager.XML_SUB_NODES.name, Client.ClientManagement.User.getUsername());
         XML_Manager.append_new_Message(workFile, XML_FILE.Communication, XML_NODES.Change_Password, XML_Manager.XML_SUB_NODES.password, password);
         return General_File.return_content_of_file(XML_Shell.get_path_of_communication_XML_File());
     }

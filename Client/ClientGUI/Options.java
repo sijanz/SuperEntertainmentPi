@@ -1,7 +1,7 @@
 package Client.ClientGUI;
 
-import Client.ClientSuperEntertainmentPi.ClientManager;
-import Client.ClientSuperEntertainmentPi.User;
+import Client.ClientManagement.ClientManager;
+import Client.ClientManagement.User;
 import Client.EasterEgg.EasterEgg;
 import javafx.fxml.FXML;
 import javafx.event.ActionEvent;

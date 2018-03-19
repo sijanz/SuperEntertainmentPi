@@ -1,4 +1,4 @@
-package Client.ClientSuperEntertainmentPi;
+package Client.ClientManagement;
 
 import org.junit.Before;
 import org.junit.Test;

@@ -35,7 +35,7 @@
                 </Label>
                 <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                     <image>
-                        <Image url="@../images/paomedia-small-n-flat-1a97d15/png/24/switch-on.png" />
+                        <Image url="@../Images/paomedia-small-n-flat-1a97d15/png/24/switch-on.png" />
                     </image>
                     <HBox.margin>
                         <Insets right="100.0" />
@@ -92,7 +92,7 @@
                             <center>
                                 <ImageView fitHeight="8072.0" fitWidth="72.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
                                     <image>
-                                        <Image url="@../images/paomedia-small-n-flat-1a97d15/png/72/user-male-alt.png" />
+                                        <Image url="@../Images/paomedia-small-n-flat-1a97d15/png/72/user-male-alt.png" />
                                     </image>
                                 </ImageView>
                             </center>
@@ -107,7 +107,7 @@
                             <center>
                                 <ImageView fitHeight="72.0" fitWidth="72.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
                                     <image>
-                                        <Image url="@../images/paomedia-small-n-flat-1a97d15/png/72/user-male-alt.png" />
+                                        <Image url="@../Images/paomedia-small-n-flat-1a97d15/png/72/user-male-alt.png" />
                                     </image>
                                 </ImageView>
                             </center>
@@ -125,7 +125,7 @@
                                     <center>
                                         <ImageView fitHeight="72.0" fitWidth="72.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
                                             <image>
-                                                <Image url="@../images/paomedia-small-n-flat-1a97d15/png/72/user-male-alt.png" />
+                                                <Image url="@../Images/paomedia-small-n-flat-1a97d15/png/72/user-male-alt.png" />
                                             </image>
                                         </ImageView>
                                     </center>
@@ -142,7 +142,7 @@
                             <center>
                                 <ImageView fitHeight="72.0" fitWidth="72.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
                                     <image>
-                                        <Image url="@../images/paomedia-small-n-flat-1a97d15/png/72/user-male-alt.png" />
+                                        <Image url="@../Images/paomedia-small-n-flat-1a97d15/png/72/user-male-alt.png" />
                                     </image>
                                 </ImageView>
                             </center>
@@ -170,7 +170,7 @@
                      <center>
                         <ImageView fitHeight="72.0" fitWidth="72.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
                            <image>
-                              <Image url="@../images/paomedia-small-n-flat-1a97d15/png/72/user-male-alt.png" />
+                              <Image url="@../Images/paomedia-small-n-flat-1a97d15/png/72/user-male-alt.png" />
                            </image>
                         </ImageView>
                      </center>

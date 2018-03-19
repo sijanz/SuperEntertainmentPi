@@ -1,5 +1,5 @@
 #MainPane {
-    -fx-background-image: url("../images/backgroundImage.png");
+    -fx-background-image: url("../Images/backgroundImage.png");
 }
 
 #TopPane {
@@ -8,14 +8,14 @@
 }
 
 #profilePicture {
-    -fx-background-image: url("../images/user-id.png");
+    -fx-background-image: url("../Images/user-id.png");
     -fx-background-position: center;
     -fx-background-repeat: no-repeat;
     -fx-background-color: transparent;
 }
 
 #homeButton {
-    -fx-background-image: url("../images/paomedia-small-n-flat-1a97d15/png/72/house.png");
+    -fx-background-image: url("../Images/paomedia-small-n-flat-1a97d15/png/72/house.png");
     -fx-background-size: 40 40;
     -fx-background-position: center;
     -fx-background-repeat: no-repeat;
@@ -23,7 +23,7 @@
 }
 
 #homeButton:hover {
-    -fx-background-image: url("../images/paomedia-small-n-flat-1a97d15/png/72/house-hover.png");
+    -fx-background-image: url("../Images/paomedia-small-n-flat-1a97d15/png/72/house-hover.png");
 }
 
 #listView {
@@ -31,7 +31,7 @@
 }
 
 #addButton {
-    -fx-background-image: url("../images/paomedia-small-n-flat-1a97d15/png/72/sign-add.png");
+    -fx-background-image: url("../Images/paomedia-small-n-flat-1a97d15/png/72/sign-add.png");
     -fx-background-size: 40 40;
     -fx-background-position: center;
     -fx-background-repeat: no-repeat;
@@ -39,11 +39,11 @@
 }
 
 #addButton:hover {
-    -fx-background-image: url("../images/paomedia-small-n-flat-1a97d15/png/72/sign-add-hover.png");
+    -fx-background-image: url("../Images/paomedia-small-n-flat-1a97d15/png/72/sign-add-hover.png");
 }
 
 #deleteButton {
-    -fx-background-image: url("../images/paomedia-small-n-flat-1a97d15/png/72/sign-delete.png");
+    -fx-background-image: url("../Images/paomedia-small-n-flat-1a97d15/png/72/sign-delete.png");
     -fx-background-size: 40 40;
     -fx-background-position: center;
     -fx-background-repeat: no-repeat;
@@ -51,11 +51,11 @@
 }
 
 #deleteButton:hover {
-    -fx-background-image: url("../images/paomedia-small-n-flat-1a97d15/png/72/sign-delete-hover.png");
+    -fx-background-image: url("../Images/paomedia-small-n-flat-1a97d15/png/72/sign-delete-hover.png");
 }
 
 #playButton {
-    -fx-background-image: url("../images/paomedia-small-n-flat-1a97d15/png/72/sign-right.png");
+    -fx-background-image: url("../Images/paomedia-small-n-flat-1a97d15/png/72/sign-right.png");
     -fx-background-size: 60 60;
     -fx-background-position: center;
     -fx-background-repeat: no-repeat;
@@ -63,11 +63,11 @@
 }
 
 #playButton:hover {
-    -fx-background-image: url("../images/paomedia-small-n-flat-1a97d15/png/72/sign-right-hover.png");
+    -fx-background-image: url("../Images/paomedia-small-n-flat-1a97d15/png/72/sign-right-hover.png");
 }
 
 #backButton {
-    -fx-background-image: url("../images/paomedia-small-n-flat-1a97d15/png/72/sign-up.png");
+    -fx-background-image: url("../Images/paomedia-small-n-flat-1a97d15/png/72/sign-up.png");
     -fx-background-size: 40 40;
     -fx-background-position: center;
     -fx-background-repeat: no-repeat;
@@ -75,11 +75,11 @@
 }
 
 #backButton:hover {
-    -fx-background-image: url("../images/paomedia-small-n-flat-1a97d15/png/72/sign-up-hover.png");
+    -fx-background-image: url("../Images/paomedia-small-n-flat-1a97d15/png/72/sign-up-hover.png");
 }
 
 #showRemoteButton {
-    -fx-background-image: url("../images/raspberry-pi-logo.png");
+    -fx-background-image: url("../Images/raspberry-pi-logo.png");
     -fx-background-size: 96 96;
     -fx-background-position: center;
     -fx-background-repeat: no-repeat;
@@ -87,11 +87,11 @@
 }
 
 #showRemoteButton:hover {
-    -fx-background-image: url("../images/raspberry-pi-logo-hover.png");
+    -fx-background-image: url("../Images/raspberry-pi-logo-hover.png");
 }
 
 #showLocalButton {
-    -fx-background-image: url("../images/paomedia-small-n-flat-1a97d15/png/96/device-computer.png");
+    -fx-background-image: url("../Images/paomedia-small-n-flat-1a97d15/png/96/device-computer.png");
     -fx-background-size: 96 96;
     -fx-background-position: center;
     -fx-background-repeat: no-repeat;
@@ -99,11 +99,11 @@
 }
 
 #showLocalButton:hover {
-    -fx-background-image: url("../images/paomedia-small-n-flat-1a97d15/png/96/device-computer-hover.png");
+    -fx-background-image: url("../Images/paomedia-small-n-flat-1a97d15/png/96/device-computer-hover.png");
 }
 
 #facebookButton {
-    -fx-background-image: url("../images/paomedia-small-n-flat-1a97d15/png/48/social-facebook.png");
+    -fx-background-image: url("../Images/paomedia-small-n-flat-1a97d15/png/48/social-facebook.png");
     -fx-background-size: 32 32;
     -fx-background-position: center;
     -fx-background-repeat: no-repeat;
@@ -111,11 +111,11 @@
 }
 
 #facebookButton:hover {
-    -fx-background-image: url("../images/paomedia-small-n-flat-1a97d15/png/48/social-facebook-hover.png");
+    -fx-background-image: url("../Images/paomedia-small-n-flat-1a97d15/png/48/social-facebook-hover.png");
 }
 
 #twitterButton {
-    -fx-background-image: url("../images/paomedia-small-n-flat-1a97d15/png/48/social-twitter.png");
+    -fx-background-image: url("../Images/paomedia-small-n-flat-1a97d15/png/48/social-twitter.png");
     -fx-background-size: 32 32;
     -fx-background-position: center;
     -fx-background-repeat: no-repeat;
@@ -123,11 +123,11 @@
 }
 
 #twitterButton:hover {
-    -fx-background-image: url("../images/paomedia-small-n-flat-1a97d15/png/48/social-twitter-hover.png");
+    -fx-background-image: url("../Images/paomedia-small-n-flat-1a97d15/png/48/social-twitter-hover.png");
 }
 
 #youtubeButton {
-    -fx-background-image: url("../images/paomedia-small-n-flat-1a97d15/png/48/social-youtube.png");
+    -fx-background-image: url("../Images/paomedia-small-n-flat-1a97d15/png/48/social-youtube.png");
     -fx-background-size: 32 32;
     -fx-background-position: center;
     -fx-background-repeat: no-repeat;
@@ -135,7 +135,7 @@
 }
 
 #youtubeButton:hover {
-    -fx-background-image: url("../images/paomedia-small-n-flat-1a97d15/png/48/social-youtube-hover.png");
+    -fx-background-image: url("../Images/paomedia-small-n-flat-1a97d15/png/48/social-youtube-hover.png");
 }
 
 #buttonPane {

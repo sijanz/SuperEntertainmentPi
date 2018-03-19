@@ -1,6 +1,6 @@
 package Client.ClientGUI;
 
-import Client.ClientSuperEntertainmentPi.ClientManager;
+import Client.ClientManagement.ClientManager;
 import General.XML_Service_Super_Entertainment_Pi.XML_Manager;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;

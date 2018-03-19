@@ -1,7 +1,7 @@
 package Client.ErrorScreen;
 
 import Client.ClientGUI.Controller;
-import Client.ClientSuperEntertainmentPi.ClientManager;
+import Client.ClientManagement.ClientManager;
 import Client.ConfigurationFileManager.ConfigurationFileManager;
 import General.Socket_Server_Super_Entertainment_Pi.Socket_Network;
 import javafx.fxml.FXML;

@@ -101,7 +101,7 @@
             </Label>
             <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../images/paomedia-small-n-flat-1a97d15/png/24/switch-on.png" />
+                  <Image url="@../Images/paomedia-small-n-flat-1a97d15/png/24/switch-on.png" />
                </image>
                <HBox.margin>
                   <Insets right="100.0" />

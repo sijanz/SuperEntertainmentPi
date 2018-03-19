@@ -1,4 +1,4 @@
-package Client.ClientSuperEntertainmentPi;
+package Client.ClientManagement;
 
 import java.io.IOException;
 import java.net.Socket;

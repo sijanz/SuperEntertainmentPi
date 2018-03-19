@@ -13,7 +13,7 @@
    <center>
       <ImageView fitHeight="257.0" fitWidth="311.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
          <image>
-            <Image url="@../images/welcome-logo.png" />
+            <Image url="@../Images/welcome-logo.png" />
          </image>
          <effect>
             <Glow level="0.27" />

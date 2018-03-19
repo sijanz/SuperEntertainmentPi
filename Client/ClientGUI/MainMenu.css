@@ -1,5 +1,5 @@
 #MainPane {
-    -fx-background-image: url("../images/backgroundImage.png");
+    -fx-background-image: url("../Images/backgroundImage.png");
 }
 
 #TopPane {
@@ -8,14 +8,14 @@
 }
 
 #profilePicture {
-    -fx-background-image: url("../images/user-id.png");
+    -fx-background-image: url("../Images/user-id.png");
     -fx-background-position: center;
     -fx-background-repeat: no-repeat;
     -fx-background-color: transparent;
 }
 
 #videoButton {
-    -fx-background-image: url("../images/paomedia-small-n-flat-1a97d15/png/72/file-video.png");
+    -fx-background-image: url("../Images/paomedia-small-n-flat-1a97d15/png/72/file-video.png");
     -fx-background-size: 72 72;
     -fx-background-position: center;
     -fx-background-repeat: no-repeat;
@@ -24,11 +24,11 @@
 
 /*GIMP -> Colors -> Brightness-Contrast -> Brightness 40*/
 #videoButton:hover {
-    -fx-background-image: url("../images/paomedia-small-n-flat-1a97d15/png/72/file-video-hover.png");
+    -fx-background-image: url("../Images/paomedia-small-n-flat-1a97d15/png/72/file-video-hover.png");
 }
 
 #musicButton {
-    -fx-background-image: url("../images/paomedia-small-n-flat-1a97d15/png/72/file-sound.png");
+    -fx-background-image: url("../Images/paomedia-small-n-flat-1a97d15/png/72/file-sound.png");
     -fx-background-size: 72 72;
     -fx-background-position: center;
     -fx-background-repeat: no-repeat;
@@ -36,11 +36,11 @@
 }
 
 #musicButton:hover {
-    -fx-background-image: url("../images/paomedia-small-n-flat-1a97d15/png/72/file-sound-hover.png");
+    -fx-background-image: url("../Images/paomedia-small-n-flat-1a97d15/png/72/file-sound-hover.png");
 }
 
 #pictureButton {
-    -fx-background-image: url("../images/paomedia-small-n-flat-1a97d15/png/72/file-picture.png");
+    -fx-background-image: url("../Images/paomedia-small-n-flat-1a97d15/png/72/file-picture.png");
     -fx-background-size: 72 72;
     -fx-background-position: center;
     -fx-background-repeat: no-repeat;
@@ -48,11 +48,11 @@
 }
 
 #pictureButton:hover {
-    -fx-background-image: url("../images/paomedia-small-n-flat-1a97d15/png/72/file-picture-hover.png");
+    -fx-background-image: url("../Images/paomedia-small-n-flat-1a97d15/png/72/file-picture-hover.png");
 }
 
 #teamButton {
-    -fx-background-image: url("../images/paomedia-small-n-flat-1a97d15/png/72/profile-group.png");
+    -fx-background-image: url("../Images/paomedia-small-n-flat-1a97d15/png/72/profile-group.png");
     -fx-background-size: 72 72;
     -fx-background-position: center;
     -fx-background-repeat: no-repeat;
@@ -60,11 +60,11 @@
 }
 
 #teamButton:hover {
-    -fx-background-image: url("../images/paomedia-small-n-flat-1a97d15/png/72/profile-group-hover.png");
+    -fx-background-image: url("../Images/paomedia-small-n-flat-1a97d15/png/72/profile-group-hover.png");
 }
 
 #settingsButton {
-    -fx-background-image: url("../images/paomedia-small-n-flat-1a97d15/png/72/wrench-screwdriver.png");
+    -fx-background-image: url("../Images/paomedia-small-n-flat-1a97d15/png/72/wrench-screwdriver.png");
     -fx-background-size: 72 72;
     -fx-background-position: center;
     -fx-background-repeat: no-repeat;
@@ -72,11 +72,11 @@
 }
 
 #settingsButton:hover {
-    -fx-background-image: url("../images/paomedia-small-n-flat-1a97d15/png/72/wrench-screwdriver-hover.png");
+    -fx-background-image: url("../Images/paomedia-small-n-flat-1a97d15/png/72/wrench-screwdriver-hover.png");
 }
 
 #exitButton {
-    -fx-background-image: url("../images/paomedia-small-n-flat-1a97d15/png/72/sign-error.png");
+    -fx-background-image: url("../Images/paomedia-small-n-flat-1a97d15/png/72/sign-error.png");
     -fx-background-size: 72 72;
     -fx-background-position: center;
     -fx-background-repeat: no-repeat;
@@ -84,5 +84,5 @@
 }
 
 #exitButton:hover {
-    -fx-background-image: url("../images/paomedia-small-n-flat-1a97d15/png/72/sign-error-hover.png");
+    -fx-background-image: url("../Images/paomedia-small-n-flat-1a97d15/png/72/sign-error-hover.png");
 }

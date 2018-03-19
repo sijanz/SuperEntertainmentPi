@@ -1,7 +1,7 @@
 package Client.ClientGUI;
 
-import Client.ClientSuperEntertainmentPi.ClientManager;
-import Client.ClientSuperEntertainmentPi.User;
+import Client.ClientManagement.ClientManager;
+import Client.ClientManagement.User;
 import General.Error.Error_Handler;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;

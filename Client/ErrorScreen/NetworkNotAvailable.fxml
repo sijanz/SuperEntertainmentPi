@@ -50,7 +50,7 @@
          <top>
             <ImageView fitHeight="96.0" fitWidth="96.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
                <image>
-                  <Image url="@../images/paomedia-small-n-flat-1a97d15/png/96/shield-warning.png" />
+                  <Image url="@../Images/paomedia-small-n-flat-1a97d15/png/96/shield-warning.png" />
                </image>
                <BorderPane.margin>
                   <Insets top="20.0" />

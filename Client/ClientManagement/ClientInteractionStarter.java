@@ -1,4 +1,4 @@
-package Client.ClientSuperEntertainmentPi;
+package Client.ClientManagement;
 
 import Client.ClientGUI.RemoteCaller;
 import javafx.application.Application;

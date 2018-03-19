@@ -1,7 +1,7 @@
 package Client.ClientGUI;
 
-import Client.ClientSuperEntertainmentPi.ClientManager;
-import Client.ClientSuperEntertainmentPi.ClientService;
+import Client.ClientManagement.ClientManager;
+import Client.ClientManagement.ClientService;
 import General.General_Super_Entertainment_Pi.General_File;
 import General.General_Super_Entertainment_Pi.General_Purpose;
 import General.XML_Service_Super_Entertainment_Pi.XML_Manager;

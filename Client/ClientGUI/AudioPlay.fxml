@@ -38,7 +38,7 @@
                   <Insets right="100.0" />
                </HBox.margin>
                <image>
-                  <Image url="@../images/paomedia-small-n-flat-1a97d15/png/24/switch-on.png" />
+                  <Image url="@../Images/paomedia-small-n-flat-1a97d15/png/24/switch-on.png" />
                </image>
             </ImageView>
                 <Label fx:id="userLabel" text="Simon" textFill="WHITE">
@@ -67,7 +67,7 @@
                     <center>
                         <ImageView fx:id="mediaSymbol" fitHeight="96.0" fitWidth="96.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
                      <image>
-                        <Image url="@../images/paomedia-small-n-flat-1a97d15/png/96/file-sound.png" />
+                        <Image url="@../Images/paomedia-small-n-flat-1a97d15/png/96/file-sound.png" />
                      </image>
                      <BorderPane.margin>
                         <Insets bottom="40.0" />

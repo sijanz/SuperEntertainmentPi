@@ -1,4 +1,4 @@
-package Client.ClientSuperEntertainmentPi;
+package Client.ClientManagement;
 
 import Client.ErrorScreen.NetworkNotAvailableError;
 import Client.ErrorScreen.NetworkNotAvailableErrorStarter;
