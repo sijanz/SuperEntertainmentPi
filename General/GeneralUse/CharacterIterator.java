@@ -1,4 +1,4 @@
-package General.General_Super_Entertainment_Pi;
+package General.GeneralUse;
 
 import java.util.Iterator;
 
@@ -25,17 +25,14 @@ public class CharacterIterator implements Iterator<Character> {
 
     @Override
     public String toString() {
-
         return this.str;
     }
 
     public String get(int itr) {
-
         return this.str.charAt(itr) + "";
     }
 
     public int size() {
-
         return this.str.length();
     }
 }

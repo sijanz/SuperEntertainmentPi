@@ -4,9 +4,9 @@ import java.net.*;
 import java.io.*;
 import java.util.List;
 
-import General.General_Super_Entertainment_Pi.General_Directory;
-import General.General_Super_Entertainment_Pi.General_File;
-import General.General_Super_Entertainment_Pi.General_Purpose;
+import General.GeneralUse.GeneralDirectory;
+import General.GeneralUse.GeneralFile;
+import General.GeneralUse.GeneralPurpose;
 import General.Media_Super_Entertainment_Pi.Media_General;
 import General.Socket_Server_Super_Entertainment_Pi.Socket_Network;
 import General.XML_Service_Super_Entertainment_Pi.XML_Manager;
@@ -102,7 +102,7 @@ public class Server_Service implements Runnable {
 			  * </media_type>
 			  *
 			  * */
-            List<String> all_files_from_specific_path = General_Directory.get_all_Files_from_path(path_to_iterate_through);
+            List<String> all_files_from_specific_path = GeneralDirectory.getAllFilesFromPath(path_to_iterate_through);
 
             for (String name_of_File : all_files_from_specific_path) {
 
@@ -176,11 +176,11 @@ public class Server_Service implements Runnable {
 			* */
 
 
-            List<String> list_of_File_Names = General_Purpose.get_Content_of_Tag_as_String(XML_Manager.XML_SUB_NODES.Clip.toString(), XML_Manager.XML_NODES.UPLOAD_Video.toString(),
+            List<String> list_of_File_Names = GeneralPurpose.getContentOfTagAsString(XML_Manager.XML_SUB_NODES.Clip.toString(), XML_Manager.XML_NODES.UPLOAD_Video.toString(),
                     XML_Manager.XML_SUB_NODES.Upload_File_Size.toString(), message);
 
 
-            List<String> list_of_File_Size = General_Purpose.get_Content_of_Tag_as_String(XML_Manager.XML_SUB_NODES.Clip.toString(), XML_Manager.XML_SUB_NODES.Upload_File_Size.toString()
+            List<String> list_of_File_Size = GeneralPurpose.getContentOfTagAsString(XML_Manager.XML_SUB_NODES.Clip.toString(), XML_Manager.XML_SUB_NODES.Upload_File_Size.toString()
                     , XML_Manager.XML_NODES.UPLOAD_Video.toString(), message);
 
 
@@ -200,9 +200,9 @@ public class Server_Service implements Runnable {
 			* It is possible to update several videos, but this needs a different structure
 			* for the uploading socket
 			* */
-            List<String> list_of_File_Names = General_Purpose.get_Content_of_Tag_as_String(XML_Manager.XML_SUB_NODES.Track.toString(), XML_Manager.XML_NODES.UPLOAD_Audio.toString(),
+            List<String> list_of_File_Names = GeneralPurpose.getContentOfTagAsString(XML_Manager.XML_SUB_NODES.Track.toString(), XML_Manager.XML_NODES.UPLOAD_Audio.toString(),
                     XML_Manager.XML_SUB_NODES.Upload_File_Size.toString(), message);
-            List<String> list_of_File_Size = General_Purpose.get_Content_of_Tag_as_String(XML_Manager.XML_SUB_NODES.Track.toString(), XML_Manager.XML_SUB_NODES.Upload_File_Size.toString()
+            List<String> list_of_File_Size = GeneralPurpose.getContentOfTagAsString(XML_Manager.XML_SUB_NODES.Track.toString(), XML_Manager.XML_SUB_NODES.Upload_File_Size.toString()
                     , XML_Manager.XML_NODES.UPLOAD_Audio.toString(), message);
 
 
@@ -223,9 +223,9 @@ public class Server_Service implements Runnable {
 			* It is possible to update several videos, but this needs a different structure
 			* for the uploading socket
 			* */
-            List<String> list_of_File_Names = General_Purpose.get_Content_of_Tag_as_String(XML_Manager.XML_SUB_NODES.Image.toString(), XML_Manager.XML_NODES.UPLOAD_Picture.toString(),
+            List<String> list_of_File_Names = GeneralPurpose.getContentOfTagAsString(XML_Manager.XML_SUB_NODES.Image.toString(), XML_Manager.XML_NODES.UPLOAD_Picture.toString(),
                     XML_Manager.XML_SUB_NODES.Upload_File_Size.toString(), message);
-            List<String> list_of_File_Size = General_Purpose.get_Content_of_Tag_as_String(XML_Manager.XML_SUB_NODES.Image.toString(), XML_Manager.XML_SUB_NODES.Upload_File_Size.toString()
+            List<String> list_of_File_Size = GeneralPurpose.getContentOfTagAsString(XML_Manager.XML_SUB_NODES.Image.toString(), XML_Manager.XML_SUB_NODES.Upload_File_Size.toString()
                     , XML_Manager.XML_NODES.UPLOAD_Picture.toString(), message);
 
 
@@ -242,7 +242,7 @@ public class Server_Service implements Runnable {
 
                 //<COMMAND><Delete>
 
-                List<String> list_of_File_Names = General_Purpose.get_Content_of_Tag_as_String("Clip", "Delete", "COMMAND", message);
+                List<String> list_of_File_Names = GeneralPurpose.getContentOfTagAsString("Clip", "Delete", "COMMAND", message);
 
                 System.out.println(message);
                 System.out.println(String.join(" , ", list_of_File_Names));
@@ -288,7 +288,7 @@ public class Server_Service implements Runnable {
             } else if (message.contains("</Rewind")) {
                 OMXPlayer.rewind();
             }
-            General_File.delete_file(XML_Shell.get_path_of_communication_XML_File());
+            GeneralFile.deleteFile(XML_Shell.get_path_of_communication_XML_File());
         }
     }
 
@@ -296,8 +296,8 @@ public class Server_Service implements Runnable {
     private void do_delete(List<String> list_of_File_Names) {
         for (String current_file : list_of_File_Names) {
             if (!(current_file.equals("<NO_PATH>"))) {
-                String path_to_the_file = General_Purpose.build_path_to_file(current_file);
-                General_File.delete_file(path_to_the_file);
+                String path_to_the_file = GeneralPurpose.buildPathToFile(current_file);
+                GeneralFile.deleteFile(path_to_the_file);
             }
         }
 
@@ -454,13 +454,13 @@ public class Server_Service implements Runnable {
         this.build_index();
 
         // @debug
-        System.out.println("Der Inhalt der verschickt werden soll " + General_File.return_content_of_file(XML_Shell.get_path_of_communication_XML_File()));
+        System.out.println("Der Inhalt der verschickt werden soll " + GeneralFile.returnContentOfFile(XML_Shell.get_path_of_communication_XML_File()));
 
 
         // We have to at a ' ', so the first character is not missing afterwards
 
         try {
-            send_message_to_client(this.connection_to_a_client, " " + General_File.return_content_of_file(XML_Shell.get_path_of_communication_XML_File()) + "\r\n");
+            send_message_to_client(this.connection_to_a_client, " " + GeneralFile.returnContentOfFile(XML_Shell.get_path_of_communication_XML_File()) + "\r\n");
         } catch (IOException e) {
             e.printStackTrace();
         }

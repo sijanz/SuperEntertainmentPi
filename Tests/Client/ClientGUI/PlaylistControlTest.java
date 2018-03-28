@@ -1,7 +1,7 @@
 package Client.ClientGUI;
 
-import General.General_Super_Entertainment_Pi.General_Directory;
-import General.General_Super_Entertainment_Pi.General_File;
+import General.GeneralUse.GeneralDirectory;
+import General.GeneralUse.GeneralFile;
 import General.XML_Service_Super_Entertainment_Pi.XML_Shell;
 import org.junit.After;
 import org.junit.Before;
@@ -25,19 +25,19 @@ public class PlaylistControlTest {
 
     @Test
     public void getVideoPlaylist() throws Exception {
-        List<String> list = General_Directory.get_all_Files_from_path(XML_Shell.get_path_to_VideoDirectory());
+        List<String> list = GeneralDirectory.getAllFilesFromPath(XML_Shell.get_path_to_VideoDirectory());
         assertEquals(list, PlaylistControl.getVideoPlaylist());
     }
 
     @Test
     public void create_New_VIDEOplaylist() throws Exception {
-        assertTrue(General_File.check_if_file_exists(XML_Shell.get_path_to_VideoDirectory() + "/testPlaylist.xml"));
+        assertTrue(GeneralFile.checkIfFileExists(XML_Shell.get_path_to_VideoDirectory() + "/testPlaylist.xml"));
     }
 
     @Test
     public void delete_VIDEOplaylist() throws Exception {
         PlaylistControl.delete_VIDEOplaylist("testPlaylist");
-        assertFalse(General_File.check_if_file_exists(XML_Shell.get_path_to_VideoDirectory() + "/testPlaylist.xml"));
+        assertFalse(GeneralFile.checkIfFileExists(XML_Shell.get_path_to_VideoDirectory() + "/testPlaylist.xml"));
     }
 
     @Test

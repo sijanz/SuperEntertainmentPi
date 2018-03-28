@@ -6,8 +6,8 @@
 package General.XML_Service_Super_Entertainment_Pi;
 
 import General.Backlog.BacklogManager;
-import General.General_Super_Entertainment_Pi.General_Directory;
-import General.General_Super_Entertainment_Pi.General_File;
+import General.GeneralUse.GeneralDirectory;
+import General.GeneralUse.GeneralFile;
 
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
@@ -233,7 +233,7 @@ public class XML_Shell {
 
         try {
 
-            General_File.create_file(correction_xml);
+            GeneralFile.createFile(correction_xml);
             create_XML_File("Configuration_Index_XML_Update_File", correction_xml);
 
         }
@@ -251,7 +251,7 @@ public class XML_Shell {
 
         try {
 
-            General_File.create_file(correction_xml);
+            GeneralFile.createFile(correction_xml);
             create_XML_File("Commitment_File", correction_xml);
 
         }
@@ -266,7 +266,7 @@ public class XML_Shell {
     {
         try {
 
-            General_File.create_file(correction_xml);
+            GeneralFile.createFile(correction_xml);
             create_XML_File("Index_XML_Copy_File", correction_xml);
 
         }
@@ -331,11 +331,11 @@ public class XML_Shell {
 
         try {
 
-            General_Directory.create_path(path_to_correction_xml);
+            GeneralDirectory.createPath(path_to_correction_xml);
 
             try {
 
-                General_File.create_file(path_to_correction_xml + "/" + correction_xml);
+                GeneralFile.createFile(path_to_correction_xml + "/" + correction_xml);
 
             } catch (IOException ex) {
 
@@ -351,15 +351,15 @@ public class XML_Shell {
 
         try {
 
-            if (!(General_Directory.check_if_path_exists(this.get_path_of_XML_Directory()))) {
-                General_Directory.create_path(this.get_path_of_XML_Directory());
+            if (!(GeneralDirectory.checkIfPathExists(this.get_path_of_XML_Directory()))) {
+                GeneralDirectory.createPath(this.get_path_of_XML_Directory());
             }
 
             try {
 
-                if (!(General_File.check_if_file_exists(this.get_path_of_Configuration_Index_XML_Listener_File()))) {
+                if (!(GeneralFile.checkIfFileExists(this.get_path_of_Configuration_Index_XML_Listener_File()))) {
 
-                    General_File.create_file(this.get_path_of_Configuration_Index_XML_Listener_File());
+                    GeneralFile.createFile(this.get_path_of_Configuration_Index_XML_Listener_File());
                     create_XML_File("Configuration_Index_XML_Listener_File", this.get_path_of_Configuration_Index_XML_Listener_File());
                 }
 
@@ -385,18 +385,18 @@ public class XML_Shell {
 
         try {
 
-            if (!(General_Directory.check_if_path_exists(this.get_path_of_XML_Directory()))) {
-                General_Directory.create_path(this.get_path_of_XML_Directory());
+            if (!(GeneralDirectory.checkIfPathExists(this.get_path_of_XML_Directory()))) {
+                GeneralDirectory.createPath(this.get_path_of_XML_Directory());
             }
 
             try {
 
-                if (!(General_File.check_if_file_exists(this.get_path_of_Configuration_XML_File()))) {
+                if (!(GeneralFile.checkIfFileExists(this.get_path_of_Configuration_XML_File()))) {
 
 
                     System.out.println("Create Configuration XML");
 
-                    General_File.create_file(this.get_path_of_Configuration_XML_File());
+                    GeneralFile.createFile(this.get_path_of_Configuration_XML_File());
                     create_XML_File("Configuration_File", this.get_path_of_Configuration_XML_File());
                 }
 
@@ -421,17 +421,17 @@ public class XML_Shell {
 
         try {
 
-            if (!(General_Directory.check_if_path_exists(this.get_path_of_XML_Directory()))) {
-                General_Directory.create_path(this.get_path_of_XML_Directory());
+            if (!(GeneralDirectory.checkIfPathExists(this.get_path_of_XML_Directory()))) {
+                GeneralDirectory.createPath(this.get_path_of_XML_Directory());
             }
 
             try {
-                if (!(General_File.check_if_file_exists(this.get_path_of_session_Credentials_XML_File()))) {
+                if (!(GeneralFile.checkIfFileExists(this.get_path_of_session_Credentials_XML_File()))) {
 
 
                     System.out.println("Session_Credentials XML");
 
-                    General_File.create_file(this.get_path_of_session_Credentials_XML_File());
+                    GeneralFile.createFile(this.get_path_of_session_Credentials_XML_File());
                     create_XML_File("Message", this.get_path_of_session_Credentials_XML_File());
                 }
 
@@ -455,13 +455,13 @@ public class XML_Shell {
 
         try {
 
-            if (!(General_Directory.check_if_path_exists(this.get_path_of_XML_Directory()))) {
-                General_Directory.create_path(this.get_path_of_XML_Directory());
+            if (!(GeneralDirectory.checkIfPathExists(this.get_path_of_XML_Directory()))) {
+                GeneralDirectory.createPath(this.get_path_of_XML_Directory());
             }
 
             try {
-                if (!(General_File.check_if_file_exists(this.get_path_of_communication_XML_File()))) {
-                    General_File.create_file(this.get_path_of_communication_XML_File());
+                if (!(GeneralFile.checkIfFileExists(this.get_path_of_communication_XML_File()))) {
+                    GeneralFile.createFile(this.get_path_of_communication_XML_File());
                     create_XML_File("Message", this.get_path_of_communication_XML_File());
                 }
 
@@ -777,12 +777,12 @@ public class XML_Shell {
             DocumentBuilder documentBuilder = documentBuilderFactory.newDocumentBuilder();
             Document document;
 
-            System.out.println("hä ist nicht temp " + this.get_path_of_communication_XML_File() + " " + General_Directory.check_if_path_exists(this.get_path_of_communication_XML_File()));
+            System.out.println("hä ist nicht temp " + this.get_path_of_communication_XML_File() + " " + GeneralDirectory.checkIfPathExists(this.get_path_of_communication_XML_File()));
 
             document = documentBuilder.parse(new File(this.get_path_of_communication_XML_File()));
 
             Element root = get_root_of_Communication_XML_File(document);
-            System.out.println(General_File.return_content_of_file(this.get_path_of_communication_XML_File()));
+            System.out.println(GeneralFile.returnContentOfFile(this.get_path_of_communication_XML_File()));
 
             Element new_Node = create_Node(document, New_Node_Name);
 
@@ -795,10 +795,10 @@ public class XML_Shell {
             StreamResult result = new StreamResult(this.get_path_of_communication_XML_File());
             transformer.transform(source, result);
 
-            System.out.println(General_File.return_content_of_file(this.get_path_of_communication_XML_File()));
+            System.out.println(GeneralFile.returnContentOfFile(this.get_path_of_communication_XML_File()));
 
         } catch (Exception e) {
-            System.out.println("exception " + this.get_path_of_communication_XML_File() + " " + General_Directory.check_if_path_exists(this.get_path_of_communication_XML_File()));
+            System.out.println("exception " + this.get_path_of_communication_XML_File() + " " + GeneralDirectory.checkIfPathExists(this.get_path_of_communication_XML_File()));
         }
 
     }

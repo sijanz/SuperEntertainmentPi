@@ -8,10 +8,10 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.List;
 
-import General.General_Super_Entertainment_Pi.General_Date;
-import General.General_Super_Entertainment_Pi.General_Directory;
-import General.General_Super_Entertainment_Pi.General_File;
-import General.General_Super_Entertainment_Pi.General_Purpose;
+import General.GeneralUse.GeneralDate;
+import General.GeneralUse.GeneralDirectory;
+import General.GeneralUse.GeneralFile;
+import General.GeneralUse.GeneralPurpose;
 import General.Media_Super_Entertainment_Pi.Media_General;
 
 
@@ -22,14 +22,14 @@ public class BacklogManager {
 
 
     private static String pathToBacklogDirectory = System.getProperty("user.dir") + "/" + "Backlog";
-    private static String backlogFilename = "Backlog_from_" + General_Date.get_Date().replace("/", "-") + "_boot_Nr_";
+    private static String backlogFilename = "Backlog_from_" + GeneralDate.getDate().replace("/", "-") + "_boot_Nr_";
 
     // Backlog file of current boot
     private static String pathToCurrentBacklogFile = "";
 
 
     private static int getLatestBootNumber() {
-        List<String> files = General_Directory.get_all_Files_from_path(pathToBacklogDirectory);
+        List<String> files = GeneralDirectory.getAllFilesFromPath(pathToBacklogDirectory);
         int max = 0;
 
         for (String t : files) {
@@ -51,7 +51,7 @@ public class BacklogManager {
 				 *
                  * First we check, if there is a possibility to determine the last boot
                  */
-                if (General_Purpose.tryParseInt(iterator.split(".txt")[0])) {
+                if (GeneralPurpose.tryParseInt(iterator.split(".txt")[0])) {
                     String indexToParse = iterator.split(".txt")[0];
 
                     if (Integer.parseInt(indexToParse) >= max) {
@@ -69,9 +69,9 @@ public class BacklogManager {
     public static void initializeBacklog() {
         System.out.println("////////////////// A new backlog file was created");
 
-        if (!(General_Directory.check_if_path_exists(pathToBacklogDirectory))) {
+        if (!(GeneralDirectory.checkIfPathExists(pathToBacklogDirectory))) {
             try {
-                General_Directory.create_path(pathToBacklogDirectory);
+                GeneralDirectory.createPath(pathToBacklogDirectory);
             } catch (SecurityException se) {
                 se.printStackTrace();
             }
@@ -102,9 +102,9 @@ public class BacklogManager {
 
 
     private static void createBacklogFile() throws IOException {
-        General_File.create_file(pathToCurrentBacklogFile);
+        GeneralFile.createFile(pathToCurrentBacklogFile);
 
-        String messageToAdd = "Server starts at " + General_Date.get_Date_and_Time() + "\r\n" +
+        String messageToAdd = "Server starts at " + GeneralDate.getDateAndTime() + "\r\n" +
 
                 "Backlog File is " + backlogFilename + getLatestBootNumber() + ".txt" + "\r\n" +
 
@@ -122,7 +122,7 @@ public class BacklogManager {
             out.println(messageToAdd);
         } catch (FileNotFoundException e) {
             try {
-                General_File.create_file(pathToCurrentBacklogFile);
+                GeneralFile.createFile(pathToCurrentBacklogFile);
             } catch (IOException io) {
                 e.printStackTrace();
             }

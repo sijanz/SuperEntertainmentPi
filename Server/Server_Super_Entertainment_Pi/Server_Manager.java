@@ -7,7 +7,7 @@ import java.util.List;
 
 import Client.ConfigurationFileManager.ConfigurationFileManager;
 import General.Backlog.BacklogManager;
-import General.General_Super_Entertainment_Pi.General_Date;
+import General.GeneralUse.GeneralDate;
 import General.Media_Super_Entertainment_Pi.Media_General;
 import General.XML_Service_Super_Entertainment_Pi.XML_Manager;
 import General.XML_Service_Super_Entertainment_Pi.XML_Shell;
@@ -68,7 +68,7 @@ public class Server_Manager {
 
                     try {
                         BacklogManager.writeToBacklogFile("////Connection details ");
-                        BacklogManager.writeToBacklogFile("Connected at " + General_Date.get_Date_and_Time());
+                        BacklogManager.writeToBacklogFile("Connected at " + GeneralDate.getDateAndTime());
                         BacklogManager.writeToBacklogFile(
                                 "Connected on " + serv_Socket.get_ip_address() + " " + serv_Socket.get_portnumber());
                         BacklogManager

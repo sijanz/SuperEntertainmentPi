@@ -1,8 +1,8 @@
 package Client.ClientGUI;
 
 import Client.ClientManagement.ClientManager;
-import General.General_Super_Entertainment_Pi.General_Directory;
-import General.General_Super_Entertainment_Pi.General_File;
+import General.GeneralUse.GeneralDirectory;
+import General.GeneralUse.GeneralFile;
 import General.XML_Service_Super_Entertainment_Pi.XML_Manager;
 import General.XML_Service_Super_Entertainment_Pi.XML_Shell;
 import General.Media_Super_Entertainment_Pi.Media_General;
@@ -178,7 +178,7 @@ public class ImageMenu extends Controller implements Initializable {
 
                 String Path = XML_Shell.get_path_to_PictureDirectory() + "/" + playlist + ".xml";
                 //get complete content
-                String fullcontent = General_File.return_content_of_file(Path);
+                String fullcontent = GeneralFile.returnContentOfFile(Path);
 
                 //change place of content1 and content2
                 fullcontent = fullcontent.replace("<" + Subnode + ">" + content2 + "</" + Subnode + "><" + Subnode + ">" + content1 + "</" + Subnode + ">", "<" + Subnode + ">" + content1 + "</" + Subnode + "><" + Subnode + ">" + content2 + "</" + Subnode + ">");
@@ -220,7 +220,7 @@ public class ImageMenu extends Controller implements Initializable {
 
                 //get complete content
                 String Path = XML_Shell.get_path_to_PictureDirectory() + "/" + playlist + ".xml";
-                String fullcontent = General_File.return_content_of_file(Path);
+                String fullcontent = GeneralFile.returnContentOfFile(Path);
 
                 //change place of content1 and content2
                 fullcontent = fullcontent.replace("<" + Subnode + ">" + content1 + "</" + Subnode + "><" + Subnode + ">" + content2 + "</" + Subnode + ">", "<" + Subnode + ">" + content2 + "</" + Subnode + "><" + Subnode + ">" + content1 + "</" + Subnode + ">");
@@ -595,7 +595,7 @@ public class ImageMenu extends Controller implements Initializable {
     private void updatePictures() {
         //get content
         List<String> contentList = PlaylistControl.Parser(XML_Shell_Working.get_path_of_index_XML_File(), XML_Manager.XML_SUB_NODES.Image);
-        List<String> contentFile = General_Directory.get_all_Files_from_path("myImages/");
+        List<String> contentFile = GeneralDirectory.getAllFilesFromPath("myImages/");
 
         for(String file: contentFile) {
             int counter = 0;
@@ -607,7 +607,7 @@ public class ImageMenu extends Controller implements Initializable {
             }
             //delete file
             if (counter == 0 && !file.equals(".directory")) {
-                General_File.delete_file("myImages/" + file);
+                GeneralFile.deleteFile("myImages/" + file);
             }
         }
     }
@@ -627,7 +627,7 @@ public class ImageMenu extends Controller implements Initializable {
                 Path = XML_Shell.get_path_to_PictureDirectory() + "/" + Path + ".xml";
 
                 //save content of path in ContentInPlaylist
-                String ContentInPlaylist = General_File.return_content_of_file(Path);
+                String ContentInPlaylist = GeneralFile.returnContentOfFile(Path);
 
                 //delete content
                 ContentInPlaylist = ContentInPlaylist.replace("<" + Subnode + ">" + ItemToDelete + "</" + Subnode + ">", "");
@@ -683,7 +683,7 @@ public class ImageMenu extends Controller implements Initializable {
                     if (flag) {
 
                         //save content of path in ContentInPlaylist
-                        String ContentInPlaylist = General_File.return_content_of_file(path);
+                        String ContentInPlaylist = GeneralFile.returnContentOfFile(path);
 
                         //delete content
                         ContentInPlaylist = ContentInPlaylist.replace("<" + Subnode + ">" + k + "</" + Subnode + ">", "");

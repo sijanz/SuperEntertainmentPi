@@ -2,8 +2,8 @@ package Client.ConfigurationFileManager;
 
 
 import Client.ClientManagement.ClientManager;
-import General.General_Super_Entertainment_Pi.General_File;
-import General.General_Super_Entertainment_Pi.General_Purpose;
+import General.GeneralUse.GeneralFile;
+import General.GeneralUse.GeneralPurpose;
 import General.XML_Service_Super_Entertainment_Pi.XML_Manager;
 import General.XML_Service_Super_Entertainment_Pi.XML_Shell;
 import General.XML_Service_Super_Entertainment_Pi.XML_Manager.XML_FILE;
@@ -30,7 +30,7 @@ public class ConfigurationFileManager {
 
 
     public static String getServerPort() {
-        return General_Purpose.get_Content_of_Tag_as_String(XML_SUB_NODES.Server_Port.toString(), General_File.return_content_of_file(workFile.get_path_of_Configuration_XML_File()));
+        return GeneralPurpose.getContentOfTagAsString(XML_SUB_NODES.Server_Port.toString(), GeneralFile.returnContentOfFile(workFile.get_path_of_Configuration_XML_File()));
     }
 
 
@@ -55,6 +55,6 @@ public class ConfigurationFileManager {
 
 
     public static String getServerIpAddress() {
-        return General_Purpose.get_Content_of_Tag_as_String(XML_SUB_NODES.Server_Ip_Adress.toString(), General_File.return_content_of_file(workFile.get_path_of_Configuration_XML_File()));
+        return GeneralPurpose.getContentOfTagAsString(XML_SUB_NODES.Server_Ip_Adress.toString(), GeneralFile.returnContentOfFile(workFile.get_path_of_Configuration_XML_File()));
     }
 }

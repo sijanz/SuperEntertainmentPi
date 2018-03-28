@@ -3,8 +3,8 @@ package General.Media_Super_Entertainment_Pi;
 import java.util.*;
 
 import General.Backlog.BacklogManager;
-import General.General_Super_Entertainment_Pi.CharacterIterator;
-import General.General_Super_Entertainment_Pi.General_Directory;
+import General.GeneralUse.CharacterIterator;
+import General.GeneralUse.GeneralDirectory;
 import General.XML_Service_Super_Entertainment_Pi.XML_Manager.XML_NODES;
 import General.XML_Service_Super_Entertainment_Pi.XML_Manager.XML_SUB_NODES;
 
@@ -139,8 +139,8 @@ public class Media_General {
     public static void init_media_archives() {
         try {
             for (String path : media_paths) {
-                if (!(General_Directory.check_if_path_exists(path))) {
-                    General_Directory.create_path(path);
+                if (!(GeneralDirectory.checkIfPathExists(path))) {
+                    GeneralDirectory.createPath(path);
                 }
             }
         } catch (SecurityException se) {

@@ -1,7 +1,7 @@
 package Client.ClientGUI;
 
 import Client.ClientManagement.ClientManager;
-import General.General_Super_Entertainment_Pi.General_File;
+import General.GeneralUse.GeneralFile;
 import General.Media_Super_Entertainment_Pi.Media_General;
 import General.XML_Service_Super_Entertainment_Pi.XML_Manager;
 import General.XML_Service_Super_Entertainment_Pi.XML_Shell;
@@ -163,7 +163,7 @@ public class VideoMenu extends Controller implements Initializable {
 
                 String Path = XML_Shell.get_path_to_VideoDirectory() + "/" + playlist + ".xml";
                 //get complete content
-                String fullcontent = General_File.return_content_of_file(Path);
+                String fullcontent = GeneralFile.returnContentOfFile(Path);
 
                 //change place of content1 and content2
                 fullcontent = fullcontent.replace("<" + Subnode + ">" + content2 + "</" + Subnode + "><" + Subnode + ">" + content1 + "</" + Subnode + ">", "<" + Subnode + ">" + content1 + "</" + Subnode + "><" + Subnode + ">" + content2 + "</" + Subnode + ">");
@@ -212,7 +212,7 @@ public class VideoMenu extends Controller implements Initializable {
 
                 //get complete content
                 String Path = XML_Shell.get_path_to_VideoDirectory() + "/" + playlist + ".xml";
-                String fullcontent = General_File.return_content_of_file(Path);
+                String fullcontent = GeneralFile.returnContentOfFile(Path);
 
                 //change place of content1 and content2
                 fullcontent = fullcontent.replace("<" + Subnode + ">" + content1 + "</" + Subnode + "><" + Subnode + ">" + content2 + "</" + Subnode + ">", "<" + Subnode + ">" + content2 + "</" + Subnode + "><" + Subnode + ">" + content1 + "</" + Subnode + ">");
@@ -276,7 +276,7 @@ public class VideoMenu extends Controller implements Initializable {
                 String Path = playlistView.getSelectionModel().getSelectedItem();
                 Path = XML_Shell.get_path_to_VideoDirectory() + "/" + Path + ".xml";
                 //save content of path in ContentInPlaylist
-                String ContentInPlaylist = General_File.return_content_of_file(Path);
+                String ContentInPlaylist = GeneralFile.returnContentOfFile(Path);
                 //delete content
                 ContentInPlaylist = ContentInPlaylist.replace("<" + Subnode + ">" + ItemToDelete + "</" + Subnode + ">", "");
                 //write new content
@@ -465,7 +465,7 @@ public class VideoMenu extends Controller implements Initializable {
                     if (flag) {
 
                         //save content of path in ContentInPlaylist
-                        String ContentInPlaylist = General_File.return_content_of_file(path);
+                        String ContentInPlaylist = GeneralFile.returnContentOfFile(path);
 
                         //delete content
                         ContentInPlaylist = ContentInPlaylist.replace("<" + Subnode + ">" + k + "</" + Subnode + ">", "");

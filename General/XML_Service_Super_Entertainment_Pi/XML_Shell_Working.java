@@ -5,7 +5,7 @@
 
 package General.XML_Service_Super_Entertainment_Pi;
 
-import General.General_Super_Entertainment_Pi.*;
+import General.GeneralUse.GeneralDirectory;
 
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.DocumentBuilder;
@@ -14,6 +14,7 @@ import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
 
+import General.GeneralUse.GeneralFile;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
@@ -74,15 +75,15 @@ public class XML_Shell_Working {
 
         try {
 
-            if (!(General_Directory.check_if_path_exists(XML_Shell_Working.get_path_of_XML_Directory()))) {
-                General_Directory.create_path(XML_Shell_Working.get_path_of_XML_Directory());
+            if (!(GeneralDirectory.checkIfPathExists(XML_Shell_Working.get_path_of_XML_Directory()))) {
+                GeneralDirectory.createPath(XML_Shell_Working.get_path_of_XML_Directory());
             }
 
             try {
 
-                if (!(General_File.check_if_file_exists(XML_Shell_Working.get_path_of_communication_XML_File()))) {
+                if (!(GeneralFile.checkIfFileExists(XML_Shell_Working.get_path_of_communication_XML_File()))) {
 
-                    General_File.create_file(XML_Shell_Working.get_path_of_communication_XML_File());
+                    GeneralFile.createFile(XML_Shell_Working.get_path_of_communication_XML_File());
                     create_XML_to_communicate();
                 }
 

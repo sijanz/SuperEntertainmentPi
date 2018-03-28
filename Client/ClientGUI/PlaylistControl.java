@@ -1,7 +1,7 @@
 package Client.ClientGUI;
 
-import General.General_Super_Entertainment_Pi.General_Directory;
-import General.General_Super_Entertainment_Pi.General_File;
+import General.GeneralUse.GeneralDirectory;
+import General.GeneralUse.GeneralFile;
 import General.XML_Service_Super_Entertainment_Pi.XML_Manager;
 import General.XML_Service_Super_Entertainment_Pi.XML_Shell;
 import General.XML_Service_Super_Entertainment_Pi.XML_Shell_Working;
@@ -16,13 +16,13 @@ class PlaylistControl {
      * get all Playlist in respective directory
      */
     static List<String> getVideoPlaylist() {
-        return General_Directory.get_all_Files_from_path(XML_Shell.get_path_to_VideoDirectory());
+        return GeneralDirectory.getAllFilesFromPath(XML_Shell.get_path_to_VideoDirectory());
     }
     static List<String> getMusicPlaylist() {
-        return General_Directory.get_all_Files_from_path(XML_Shell.get_path_to_MusicDirectory());
+        return GeneralDirectory.getAllFilesFromPath(XML_Shell.get_path_to_MusicDirectory());
     }
     static List<String> getPicturePlaylist() {
-        return General_Directory.get_all_Files_from_path(XML_Shell.get_path_to_PictureDirectory());
+        return GeneralDirectory.getAllFilesFromPath(XML_Shell.get_path_to_PictureDirectory());
     }
 
 
@@ -49,7 +49,7 @@ class PlaylistControl {
         create_New_VIDEOplaylist("allVideos");
 
         //get content of new File
-        String newcontentVideo = General_File.return_content_of_file(XML_Shell.get_path_to_VideoDirectory() + "/allVideos.xml");
+        String newcontentVideo = GeneralFile.returnContentOfFile(XML_Shell.get_path_to_VideoDirectory() + "/allVideos.xml");
 
         //turn content from List<String> to String
         for (String i : contentListVideo) {
@@ -73,7 +73,7 @@ class PlaylistControl {
         create_New_MUSICplaylist("allMusic");
 
         //get content of new File
-        String newcontentMusic = General_File.return_content_of_file(XML_Shell.get_path_to_MusicDirectory() + "/allMusic.xml");
+        String newcontentMusic = GeneralFile.returnContentOfFile(XML_Shell.get_path_to_MusicDirectory() + "/allMusic.xml");
 
         //turn content from List<String> to String
         for (String i : contentListMusic) {
@@ -97,7 +97,7 @@ class PlaylistControl {
         create_New_PICTUREplaylist("allImages");
 
         //get content of new File
-        String newcontentImage = General_File.return_content_of_file(XML_Shell.get_path_to_PictureDirectory() + "/allImages.xml");
+        String newcontentImage = GeneralFile.returnContentOfFile(XML_Shell.get_path_to_PictureDirectory() + "/allImages.xml");
 
         //turn content from List<String> to String
         for (String i : contentListImage) {
@@ -272,10 +272,10 @@ class PlaylistControl {
                 break;
         }
         if (flag) {
-            List<String> playlists = General_Directory.get_all_Files_from_path(directory);
+            List<String> playlists = GeneralDirectory.getAllFilesFromPath(directory);
             for (String i : playlists) {
                 if (!i.equals(".directory") && !i.equals("allVideos.xml") && !i.equals("allMusic.xml") && !i.equals("allPictures.xml")) {
-                    String filecontent = General_File.return_content_of_file(directory + "/" + i);
+                    String filecontent = GeneralFile.returnContentOfFile(directory + "/" + i);
                     List<String> content = Parser(directory + "/" + i, subnode);
                     for (String k : content) {
                         counter = 0;

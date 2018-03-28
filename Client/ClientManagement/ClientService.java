@@ -2,8 +2,8 @@ package Client.ClientManagement;
 
 import java.io.*;
 
-import General.General_Super_Entertainment_Pi.General_File;
-import General.General_Super_Entertainment_Pi.General_Purpose;
+import General.GeneralUse.GeneralFile;
+import General.GeneralUse.GeneralPurpose;
 import General.XML_Service_Super_Entertainment_Pi.XML_Manager;
 import General.XML_Service_Super_Entertainment_Pi.XML_Shell;
 import General.XML_Service_Super_Entertainment_Pi.XML_Manager.XML_FILE;
@@ -61,7 +61,7 @@ public class ClientService extends Thread {
     public static void receiveMessageFromServer(ClientSocket socket) throws IOException {
         InputStream is = socket.clientSocket.getInputStream();
         BufferedReader inputBuffer = new BufferedReader(new InputStreamReader(is));
-        String receivedMessage = General_Purpose.normalize_String(inputBuffer.readLine().replace("<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\"?>", ""));
+        String receivedMessage = GeneralPurpose.normalizeString(inputBuffer.readLine().replace("<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\"?>", ""));
         setLastMessageFromServer(receivedMessage);
 
         // @debug
@@ -96,13 +96,13 @@ public class ClientService extends Thread {
      * @return the built string
      */
     static String requestIndex() {
-        if (General_File.check_if_file_exists(XML_Shell.get_path_of_communication_XML_File())) {
-            General_File.delete_file(XML_Shell.get_path_of_communication_XML_File());
+        if (GeneralFile.checkIfFileExists(XML_Shell.get_path_of_communication_XML_File())) {
+            GeneralFile.deleteFile(XML_Shell.get_path_of_communication_XML_File());
         }
         XML_Manager.create_Message(workFile, XML_FILE.Communication, XML_NODES.Get_Index, XML_Shell.get_path_of_communication_XML_File());
         XML_Manager.append_new_Message(workFile, XML_FILE.Communication, XML_NODES.Get_Index, XML_Manager.XML_SUB_NODES.name, Client.ClientManagement.User.getUsername());
         XML_Manager.append_new_Message(workFile, XML_FILE.Communication, XML_NODES.Get_Index, XML_Manager.XML_SUB_NODES.token, Client.ClientManagement.User.getToken());
-        return General_File.return_content_of_file(XML_Shell.get_path_of_communication_XML_File());
+        return GeneralFile.returnContentOfFile(XML_Shell.get_path_of_communication_XML_File());
     }
 
 
@@ -112,13 +112,13 @@ public class ClientService extends Thread {
      * @return the built string
      */
     static String requestLoginVerification() {
-        if (General_File.check_if_file_exists(XML_Shell.get_path_of_communication_XML_File())) {
-            General_File.delete_file(XML_Shell.get_path_of_communication_XML_File());
+        if (GeneralFile.checkIfFileExists(XML_Shell.get_path_of_communication_XML_File())) {
+            GeneralFile.deleteFile(XML_Shell.get_path_of_communication_XML_File());
         }
         XML_Manager.create_Message(workFile, XML_FILE.Communication, XML_NODES.Login, XML_Shell.get_path_of_communication_XML_File());
         XML_Manager.append_new_Message(workFile, XML_FILE.Communication, XML_NODES.Login, XML_Manager.XML_SUB_NODES.name, Client.ClientManagement.User.getUsername());
         XML_Manager.append_new_Message(workFile, XML_FILE.Communication, XML_NODES.Login, XML_Manager.XML_SUB_NODES.password, Client.ClientManagement.User.getPassword());
-        return General_File.return_content_of_file(XML_Shell.get_path_of_communication_XML_File());
+        return GeneralFile.returnContentOfFile(XML_Shell.get_path_of_communication_XML_File());
     }
 
 
@@ -128,12 +128,12 @@ public class ClientService extends Thread {
      * @return the built string
      */
     static String logoutUser() {
-        if (General_File.check_if_file_exists(XML_Shell.get_path_of_communication_XML_File())) {
-            General_File.delete_file(XML_Shell.get_path_of_communication_XML_File());
+        if (GeneralFile.checkIfFileExists(XML_Shell.get_path_of_communication_XML_File())) {
+            GeneralFile.deleteFile(XML_Shell.get_path_of_communication_XML_File());
         }
         XML_Manager.create_Message(workFile, XML_FILE.Communication, XML_NODES.Logout, XML_Shell.get_path_of_communication_XML_File());
         XML_Manager.append_new_Message(workFile, XML_FILE.Communication, XML_NODES.Logout, XML_Manager.XML_SUB_NODES.name, Client.ClientManagement.User.getUsername());
-        return General_File.return_content_of_file(XML_Shell.get_path_of_communication_XML_File());
+        return GeneralFile.returnContentOfFile(XML_Shell.get_path_of_communication_XML_File());
     }
 
 
@@ -143,13 +143,13 @@ public class ClientService extends Thread {
      * @return the built string
      */
     static String requestRegistration() {
-        if (General_File.check_if_file_exists(XML_Shell.get_path_of_communication_XML_File())) {
-            General_File.delete_file(XML_Shell.get_path_of_communication_XML_File());
+        if (GeneralFile.checkIfFileExists(XML_Shell.get_path_of_communication_XML_File())) {
+            GeneralFile.deleteFile(XML_Shell.get_path_of_communication_XML_File());
         }
         XML_Manager.create_Message(workFile, XML_FILE.Communication, XML_NODES.Register, XML_Shell.get_path_of_communication_XML_File());
         XML_Manager.append_new_Message(workFile, XML_FILE.Communication, XML_NODES.Register, XML_Manager.XML_SUB_NODES.name, Client.ClientManagement.User.getUsername());
         XML_Manager.append_new_Message(workFile, XML_FILE.Communication, XML_NODES.Register, XML_Manager.XML_SUB_NODES.password, Client.ClientManagement.User.getPassword());
-        return General_File.return_content_of_file(XML_Shell.get_path_of_communication_XML_File());
+        return GeneralFile.returnContentOfFile(XML_Shell.get_path_of_communication_XML_File());
     }
 
 
@@ -159,12 +159,12 @@ public class ClientService extends Thread {
      * @return the built string
      */
     static String deleteUser() {
-        if (General_File.check_if_file_exists(XML_Shell.get_path_of_communication_XML_File())) {
-            General_File.delete_file(XML_Shell.get_path_of_communication_XML_File());
+        if (GeneralFile.checkIfFileExists(XML_Shell.get_path_of_communication_XML_File())) {
+            GeneralFile.deleteFile(XML_Shell.get_path_of_communication_XML_File());
         }
         XML_Manager.create_Message(workFile, XML_FILE.Communication, XML_NODES.Delete_User, XML_Shell.get_path_of_communication_XML_File());
         XML_Manager.append_new_Message(workFile, XML_FILE.Communication, XML_NODES.Delete_User, XML_Manager.XML_SUB_NODES.name, Client.ClientManagement.User.getUsername());
-        return General_File.return_content_of_file(XML_Shell.get_path_of_communication_XML_File());
+        return GeneralFile.returnContentOfFile(XML_Shell.get_path_of_communication_XML_File());
     }
 
 
@@ -174,12 +174,12 @@ public class ClientService extends Thread {
      * @return the built string
      */
     static String changePassword(String password) {
-        if (General_File.check_if_file_exists(XML_Shell.get_path_of_communication_XML_File())) {
-            General_File.delete_file(XML_Shell.get_path_of_communication_XML_File());
+        if (GeneralFile.checkIfFileExists(XML_Shell.get_path_of_communication_XML_File())) {
+            GeneralFile.deleteFile(XML_Shell.get_path_of_communication_XML_File());
         }
         XML_Manager.create_Message(workFile, XML_FILE.Communication, XML_NODES.Change_Password, XML_Shell.get_path_of_communication_XML_File());
         XML_Manager.append_new_Message(workFile, XML_FILE.Communication, XML_NODES.Change_Password, XML_Manager.XML_SUB_NODES.name, Client.ClientManagement.User.getUsername());
         XML_Manager.append_new_Message(workFile, XML_FILE.Communication, XML_NODES.Change_Password, XML_Manager.XML_SUB_NODES.password, password);
-        return General_File.return_content_of_file(XML_Shell.get_path_of_communication_XML_File());
+        return GeneralFile.returnContentOfFile(XML_Shell.get_path_of_communication_XML_File());
     }
 }

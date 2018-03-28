@@ -2,8 +2,8 @@ package Client.ClientGUI;
 
 import Client.ClientManagement.ClientManager;
 import Client.ClientManagement.ClientService;
-import General.General_Super_Entertainment_Pi.General_File;
-import General.General_Super_Entertainment_Pi.General_Purpose;
+import General.GeneralUse.GeneralFile;
+import General.GeneralUse.GeneralPurpose;
 import General.XML_Service_Super_Entertainment_Pi.XML_Manager;
 import General.XML_Service_Super_Entertainment_Pi.XML_Shell;
 import General.XML_Service_Super_Entertainment_Pi.XML_Manager.XML_NODES;
@@ -87,7 +87,7 @@ class ClientInterface {
      * @param videoName the video to delete
      */
     private static void deleteFile(XML_Manager.XML_NODES mediaType, String videoName) throws IOException {
-        General_File.delete_file(XML_Shell.get_path_of_communication_XML_File());
+        GeneralFile.deleteFile(XML_Shell.get_path_of_communication_XML_File());
 
         XML_Manager.create_Message(XML_NODES.COMMAND, XML_Shell.get_path_of_communication_XML_File());
 
@@ -96,7 +96,7 @@ class ClientInterface {
         ClientManager.rebuildSocket();
 
         // send XML file to server
-        ClientService.sendMessageToServer(ClientManager.getClientSocket(), General_File.return_content_of_file(XML_Shell.get_path_of_communication_XML_File()));
+        ClientService.sendMessageToServer(ClientManager.getClientSocket(), GeneralFile.returnContentOfFile(XML_Shell.get_path_of_communication_XML_File()));
 
         // wait for confirmation
        // ClientService.receiveMessageFromServer(ClientManager.getClientSocket());
@@ -113,7 +113,7 @@ class ClientInterface {
     private static void addFile(File media, XML_NODES uploadType, XML_SUB_NODES fileType) throws Exception {
 
         // delete old communication.xml
-        General_File.delete_file(XML_Shell.get_path_of_communication_XML_File());
+        GeneralFile.deleteFile(XML_Shell.get_path_of_communication_XML_File());
 
         // create xml file
         XML_Manager.create_Message(uploadType, XML_Shell.get_path_of_communication_XML_File());
@@ -124,17 +124,17 @@ class ClientInterface {
                 media.length() + "");
 
         XML_Manager.append_new_Message(uploadType, XML_SUB_NODES.User_Name, XML_Shell.get_path_of_communication_XML_File(), "Bernd");
-        XML_Manager.append_new_Message(uploadType, XML_Manager.XML_SUB_NODES.Hash_of_the_File, XML_Shell.get_path_of_communication_XML_File(), General_Purpose.create_Hash_of_File(media));
+        XML_Manager.append_new_Message(uploadType, XML_Manager.XML_SUB_NODES.Hash_of_the_File, XML_Shell.get_path_of_communication_XML_File(), GeneralPurpose.createHashOfFile(media));
 
 
         // @debug
-        System.out.println(General_File.return_content_of_file(XML_Shell.get_path_of_communication_XML_File()) + " <  ------ " + XML_Shell.get_path_of_communication_XML_File());
+        System.out.println(GeneralFile.returnContentOfFile(XML_Shell.get_path_of_communication_XML_File()) + " <  ------ " + XML_Shell.get_path_of_communication_XML_File());
 
         // rebuild socket
         ClientManager.rebuildSocket();
 
         // send XML file to server
-        ClientService.sendMessageToServer(ClientManager.getClientSocket(), General_File.return_content_of_file(XML_Shell.get_path_of_communication_XML_File()));
+        ClientService.sendMessageToServer(ClientManager.getClientSocket(), GeneralFile.returnContentOfFile(XML_Shell.get_path_of_communication_XML_File()));
 
         // wait for confirmation
         ClientService.receiveMessageFromServer(ClientManager.getClientSocket());
@@ -158,20 +158,20 @@ class ClientInterface {
     private static void sendCommand(String fileName, XML_SUB_NODES commandName) throws Exception {
 
         // delete old XML-file
-        General_File.delete_file(XML_Shell.get_path_of_communication_XML_File());
+        GeneralFile.deleteFile(XML_Shell.get_path_of_communication_XML_File());
 
         // create message
         XML_Manager.create_Message(XML_NODES.COMMAND, XML_Shell.get_path_of_communication_XML_File());
         XML_Manager.append_new_Message(XML_NODES.COMMAND, commandName, XML_Shell.get_path_of_communication_XML_File(), fileName);
 
         // @debug
-        System.out.println(General_File.return_content_of_file(XML_Shell.get_path_of_communication_XML_File()));
+        System.out.println(GeneralFile.returnContentOfFile(XML_Shell.get_path_of_communication_XML_File()));
 
         // rebuild socket
         ClientManager.rebuildSocket();
 
         // send message to server
-        ClientService.sendMessageToServer(ClientManager.getClientSocket(), General_File.return_content_of_file(XML_Shell.get_path_of_communication_XML_File()));
+        ClientService.sendMessageToServer(ClientManager.getClientSocket(), GeneralFile.returnContentOfFile(XML_Shell.get_path_of_communication_XML_File()));
     }
 
 
@@ -183,20 +183,20 @@ class ClientInterface {
     private static void sendCommand(XML_SUB_NODES commandName) throws Exception {
 
         // delete old XML-file
-        General_File.delete_file(XML_Shell.get_path_of_communication_XML_File());
+        GeneralFile.deleteFile(XML_Shell.get_path_of_communication_XML_File());
 
         // create message
         XML_Manager.create_Message(XML_NODES.COMMAND, XML_Shell.get_path_of_communication_XML_File());
         XML_Manager.append_new_Message(XML_NODES.COMMAND, commandName, XML_Shell.get_path_of_communication_XML_File());
 
         // @debug
-        System.out.println(General_File.return_content_of_file(XML_Shell.get_path_of_communication_XML_File()));
+        System.out.println(GeneralFile.returnContentOfFile(XML_Shell.get_path_of_communication_XML_File()));
 
         // rebuild socket
         ClientManager.rebuildSocket();
 
         // send message to server
-        ClientService.sendMessageToServer(ClientManager.getClientSocket(), General_File.return_content_of_file(XML_Shell.get_path_of_communication_XML_File()));
+        ClientService.sendMessageToServer(ClientManager.getClientSocket(), GeneralFile.returnContentOfFile(XML_Shell.get_path_of_communication_XML_File()));
     }
 
 

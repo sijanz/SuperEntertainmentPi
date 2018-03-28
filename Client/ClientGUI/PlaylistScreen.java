@@ -1,6 +1,6 @@
 package Client.ClientGUI;
 
-import General.General_Super_Entertainment_Pi.General_File;
+import General.GeneralUse.GeneralFile;
 import General.XML_Service_Super_Entertainment_Pi.XML_Shell;
 
 import javafx.event.ActionEvent;
@@ -78,7 +78,7 @@ public class PlaylistScreen extends Controller implements Initializable {
                 case "videoadd":
                     //get content in playlist-file and save it in ContentInPlaylist
                     String PathVideo = XML_Shell.get_path_to_VideoDirectory() + "/" + playlistname + ".xml";
-                    String ContentInPlaylistVideo = General_File.return_content_of_file(PathVideo);
+                    String ContentInPlaylistVideo = GeneralFile.returnContentOfFile(PathVideo);
 
                     //add new Video to file
                     ContentInPlaylistVideo = ContentInPlaylistVideo.replace("</VIDEO>", "<" + VideoMenu.Subnode + ">" + selectedItem + "</" + VideoMenu.Subnode + ">" + "</VIDEO>");
@@ -94,7 +94,7 @@ public class PlaylistScreen extends Controller implements Initializable {
                 case "musicadd":
                     //get content in playlist-file and save it in ContentInPlaylist
                     String PathMusic = XML_Shell.get_path_to_MusicDirectory() + "/" + playlistname + ".xml";
-                    String ContentInPlaylistMusic = General_File.return_content_of_file(PathMusic);
+                    String ContentInPlaylistMusic = GeneralFile.returnContentOfFile(PathMusic);
 
                     //add new Video to file
                     ContentInPlaylistMusic = ContentInPlaylistMusic.replace("</MUSIC>", "<Track>" + selectedItem + "</Track></MUSIC>");
@@ -110,7 +110,7 @@ public class PlaylistScreen extends Controller implements Initializable {
                 case "pictureadd":
                     //get content in playlist-file and save it in ContentInPlaylist
                     String PathPicture = XML_Shell.get_path_to_PictureDirectory() + "/" + playlistname + ".xml";
-                    String ContentInPlaylistPicture = General_File.return_content_of_file(PathPicture);
+                    String ContentInPlaylistPicture = GeneralFile.returnContentOfFile(PathPicture);
                     System.out.println(ContentInPlaylistPicture);
 
                     //add new Video to file

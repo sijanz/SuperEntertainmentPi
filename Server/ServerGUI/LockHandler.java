@@ -3,7 +3,7 @@ package Server.ServerGUI;
 import java.io.File;
 import java.util.List;
 
-import static General.General_Super_Entertainment_Pi.General_Directory.get_all_Files_from_path;
+import static General.GeneralUse.GeneralDirectory.getAllFilesFromPath;
 
 
 /**
@@ -31,7 +31,7 @@ public class LockHandler implements Runnable {
      * Searches for .lock files in the path determines the action if a .lock file is found.
      */
     private void checkLockFiles() {
-        List<String> locks = get_all_Files_from_path(this.lockPath);
+        List<String> locks = getAllFilesFromPath(this.lockPath);
         for (String currentLock : locks) {
             if (isLock(currentLock)) {
 
