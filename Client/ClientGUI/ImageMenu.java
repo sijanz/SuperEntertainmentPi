@@ -5,7 +5,7 @@ import General.GeneralUse.GeneralDirectory;
 import General.GeneralUse.GeneralFile;
 import General.XML_Service_Super_Entertainment_Pi.XML_Manager;
 import General.XML_Service_Super_Entertainment_Pi.XML_Shell;
-import General.Media_Super_Entertainment_Pi.Media_General;
+import General.GeneralUse.GeneralMedia;
 
 
 import General.XML_Service_Super_Entertainment_Pi.XML_Shell_Working;
@@ -303,7 +303,7 @@ public class ImageMenu extends Controller implements Initializable {
     private ObservableList<File> listFilesInFolder(File directory)throws Exception{
         if(directory.isDirectory()){
             ObservableList<File> list= FXCollections.observableArrayList();
-            Media_General.Picture_Format[] pictureExtensionArray=Media_General.Picture_Format.values();
+            GeneralMedia.Picture_Format[] pictureExtensionArray= GeneralMedia.Picture_Format.values();
             String[] extensions = new String[pictureExtensionArray.length];
             for(int i=0;i<pictureExtensionArray.length;i++){
                 extensions[i]=pictureExtensionArray[i].name().toLowerCase();

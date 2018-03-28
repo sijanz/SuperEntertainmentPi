@@ -2,7 +2,7 @@ package Client.ClientGUI;
 
 import Client.ClientManagement.ClientManager;
 import General.GeneralUse.GeneralFile;
-import General.Media_Super_Entertainment_Pi.Media_General;
+import General.GeneralUse.GeneralMedia;
 import General.XML_Service_Super_Entertainment_Pi.XML_Manager;
 import General.XML_Service_Super_Entertainment_Pi.XML_Shell;
 import javafx.collections.FXCollections;
@@ -343,7 +343,7 @@ public class VideoMenu extends Controller implements Initializable {
     private ObservableList<File> listFilesInFolder(File directory) throws Exception {
         if (directory.isDirectory()) {
             ObservableList<File> list = FXCollections.observableArrayList();
-            Media_General.Video_Format[] videoExtensionArray = Media_General.Video_Format.values();
+            GeneralMedia.Video_Format[] videoExtensionArray = GeneralMedia.Video_Format.values();
             String[] extensions = new String[videoExtensionArray.length];
             for (int i = 0; i < videoExtensionArray.length; i++) {
                 extensions[i] = videoExtensionArray[i].name().toLowerCase();

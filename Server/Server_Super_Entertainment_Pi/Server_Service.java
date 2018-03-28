@@ -7,7 +7,7 @@ import java.util.List;
 import General.GeneralUse.GeneralDirectory;
 import General.GeneralUse.GeneralFile;
 import General.GeneralUse.GeneralPurpose;
-import General.Media_Super_Entertainment_Pi.Media_General;
+import General.GeneralUse.GeneralMedia;
 import General.Socket_Server_Super_Entertainment_Pi.Socket_Network;
 import General.XML_Service_Super_Entertainment_Pi.XML_Manager;
 import General.XML_Service_Super_Entertainment_Pi.XML_Shell;
@@ -80,9 +80,9 @@ public class Server_Service implements Runnable {
 		media types, with the different
 		name types
 		*/
-        for (String path_to_iterate_through : Media_General.get_media_paths()) {
+        for (String path_to_iterate_through : GeneralMedia.getMediaPaths()) {
 
-            XML_Manager.create_Message(Media_General.identify_path(path_to_iterate_through));
+            XML_Manager.create_Message(GeneralMedia.identifyPath(path_to_iterate_through));
 
 
 			/*
@@ -116,8 +116,8 @@ public class Server_Service implements Runnable {
 				  * 	  </name_of_media_type_instance>
 			      *
 				  * */
-                XML_Manager.append_new_Message(Media_General.identify_path(path_to_iterate_through),
-                        Media_General.identify_media_type_instance(Media_General.identify_path(path_to_iterate_through)),
+                XML_Manager.append_new_Message(GeneralMedia.identifyPath(path_to_iterate_through),
+                        GeneralMedia.identifyMediaTypeInstance(GeneralMedia.identifyPath(path_to_iterate_through)),
                         name_of_File);
             }
         }
@@ -184,7 +184,7 @@ public class Server_Service implements Runnable {
                     , XML_Manager.XML_NODES.UPLOAD_Video.toString(), message);
 
 
-            String new_file_path = Media_General.determine_media_pathname(XML_Manager.XML_NODES.VIDEO.toString(), list_of_File_Names.get(0));
+            String new_file_path = GeneralMedia.determineMediaPathName(XML_Manager.XML_NODES.VIDEO.toString(), list_of_File_Names.get(0));
 
             do_upload(new_file_path, Integer.parseInt(list_of_File_Size.get(0)));
 
@@ -206,7 +206,7 @@ public class Server_Service implements Runnable {
                     , XML_Manager.XML_NODES.UPLOAD_Audio.toString(), message);
 
 
-            String new_file_path = Media_General.determine_media_pathname(XML_Manager.XML_NODES.MUSIC.toString(), list_of_File_Names.get(0));
+            String new_file_path = GeneralMedia.determineMediaPathName(XML_Manager.XML_NODES.MUSIC.toString(), list_of_File_Names.get(0));
 
             System.out.println("Name " + list_of_File_Names.get(0) + " " + list_of_File_Size.get(0));
             do_upload(new_file_path, Integer.parseInt(list_of_File_Size.get(0)));
@@ -229,7 +229,7 @@ public class Server_Service implements Runnable {
                     , XML_Manager.XML_NODES.UPLOAD_Picture.toString(), message);
 
 
-            String new_file_path = Media_General.determine_media_pathname(XML_Manager.XML_NODES.PICTURE.toString(), list_of_File_Names.get(0));
+            String new_file_path = GeneralMedia.determineMediaPathName(XML_Manager.XML_NODES.PICTURE.toString(), list_of_File_Names.get(0));
 
             System.out.println("Name " + list_of_File_Names.get(0) + " " + list_of_File_Size.get(0));
             do_upload(new_file_path, Integer.parseInt(list_of_File_Size.get(0)));

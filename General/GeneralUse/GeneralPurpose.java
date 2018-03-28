@@ -9,8 +9,6 @@ import java.security.NoSuchAlgorithmException;
 import java.util.ArrayList;
 import java.util.List;
 
-import General.Media_Super_Entertainment_Pi.Media_General;
-
 
 /**
  * @author Simon, Dustin
@@ -24,7 +22,7 @@ public class GeneralPurpose {
      *
      * */
     public static String buildPathToFile(String filename) {
-        List<String> pathsToSearch = Media_General.get_media_paths();
+        List<String> pathsToSearch = GeneralMedia.getMediaPaths();
         List<String> filesOfSpecificPath;
 
         for (String currentPath : pathsToSearch) {

@@ -8,7 +8,7 @@ import java.util.List;
 import Client.ConfigurationFileManager.ConfigurationFileManager;
 import General.Backlog.BacklogManager;
 import General.GeneralUse.GeneralDate;
-import General.Media_Super_Entertainment_Pi.Media_General;
+import General.GeneralUse.GeneralMedia;
 import General.XML_Service_Super_Entertainment_Pi.XML_Manager;
 import General.XML_Service_Super_Entertainment_Pi.XML_Shell;
 import General.XML_Service_Super_Entertainment_Pi.XML_Manager.XML_FILE;
@@ -39,7 +39,7 @@ public class Server_Manager {
 
         Server_Socket.set_Server_Socket();
 
-        Media_General.init_media_archives();
+        GeneralMedia.initMediaArchives();
 
         BacklogManager.initializeBacklog();
 

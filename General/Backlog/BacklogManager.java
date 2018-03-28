@@ -12,7 +12,7 @@ import General.GeneralUse.GeneralDate;
 import General.GeneralUse.GeneralDirectory;
 import General.GeneralUse.GeneralFile;
 import General.GeneralUse.GeneralPurpose;
-import General.Media_Super_Entertainment_Pi.Media_General;
+import General.GeneralUse.GeneralMedia;
 
 
 /**
@@ -111,9 +111,9 @@ public class BacklogManager {
                 "Backlog is located at " + pathToBacklogDirectory + "\r\n" +
 
                 "Medias are located at : " + "\r\n" +
-                Media_General.get_path_to_Music_Direcotry() + "\r\n" +
-                Media_General.get_path_to_Picture_Direcotry() + "\r\n" +
-                Media_General.get_path_to_Video_Direcotry() + "\r\n";
+                GeneralMedia.getPathToMusicDirectory() + "\r\n" +
+                GeneralMedia.getPathToPictureDirectory() + "\r\n" +
+                GeneralMedia.getPathToVideoDirectory() + "\r\n";
 
         // @debug
         System.out.println(messageToAdd);

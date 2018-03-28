@@ -4,7 +4,7 @@ import Client.ClientManagement.ClientManager;
 import General.GeneralUse.GeneralFile;
 import General.XML_Service_Super_Entertainment_Pi.XML_Manager;
 import General.XML_Service_Super_Entertainment_Pi.XML_Shell;
-import General.Media_Super_Entertainment_Pi.Media_General;
+import General.GeneralUse.GeneralMedia;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -288,7 +288,7 @@ public class AudioMenu extends Controller implements Initializable {
     private ObservableList<File> listFilesInFolder(File directory) throws Exception{
         if(directory.isDirectory()){
             ObservableList<File> list= FXCollections.observableArrayList();
-            Media_General.Music_Format[] musicExtensionArray=Media_General.Music_Format.values();
+            GeneralMedia.Music_Format[] musicExtensionArray= GeneralMedia.Music_Format.values();
             String[] extensions = new String[musicExtensionArray.length];
             for(int i=0;i<musicExtensionArray.length;i++){
                 extensions[i]=musicExtensionArray[i].name().toLowerCase();
