@@ -62,7 +62,7 @@ public class Server_Manager {
                     // @debug
                     System.out.println("Waiting for a client ");
 
-                    System.out.println(serv_Socket.get_ip_address() + " " + serv_Socket.get_portnumber() + "  " + Server_Socket.get_standard_CIDR());
+                    System.out.println(serv_Socket.get_ip_address() + " " + serv_Socket.getPortNumber() + "  " + Server_Socket.getStandardCIDR());
 
                     Socket connection_to_a_Client = serv_Socket.listen_on_port();
 
@@ -70,7 +70,7 @@ public class Server_Manager {
                         BacklogManager.writeToBacklogFile("////Connection details ");
                         BacklogManager.writeToBacklogFile("Connected at " + GeneralDate.getDateAndTime());
                         BacklogManager.writeToBacklogFile(
-                                "Connected on " + serv_Socket.get_ip_address() + " " + serv_Socket.get_portnumber());
+                                "Connected on " + serv_Socket.get_ip_address() + " " + serv_Socket.getPortNumber());
                         BacklogManager
                                 .writeToBacklogFile("Connected with pid  " + ManagementFactory.getRuntimeMXBean().getName());
 

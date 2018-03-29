@@ -7,13 +7,13 @@ import java.net.Socket;
 import java.net.UnknownHostException;
 
 import Client.ConfigurationFileManager.ConfigurationFileManager;
-import General.Socket_Server_Super_Entertainment_Pi.Socket_Network;
+import General.SocketNetwork.SocketNetwork;
 
 
 /**
  * @author Dustin
  */
-class Server_Socket extends Socket_Network {
+class Server_Socket extends SocketNetwork {
 
     private static String standard_ip_address = ConfigurationFileManager.getServerIpAddress();
 
@@ -24,10 +24,10 @@ class Server_Socket extends Socket_Network {
         System.out.println(ConfigurationFileManager.getServerPort());
 
         System.out.println(ConfigurationFileManager.getServerIpAddress());
-        Socket_Network.set_standard_ip_address(ConfigurationFileManager.getServerIpAddress());
-        Socket_Network.set_standard_port(Integer.parseInt(ConfigurationFileManager.getServerPort()));
+        SocketNetwork.setStandardIpAddress(ConfigurationFileManager.getServerIpAddress());
+        SocketNetwork.setStandardPort(Integer.parseInt(ConfigurationFileManager.getServerPort()));
         String standard_CIDR = "24";
-        Socket_Network.set_standard_CIDR(standard_CIDR);
+        SocketNetwork.setStandardCIDR(standard_CIDR);
     }
 
 
@@ -36,16 +36,16 @@ class Server_Socket extends Socket_Network {
 
         try {
             if (this.get_ip_address().equals("127.0.0.1")) {
-                set_hostname("localhost");
+                setHostname("localhost");
             }
 
-            this.serverSocket = new ServerSocket(this.get_portnumber(), 50,
+            this.serverSocket = new ServerSocket(this.getPortNumber(), 50,
                     InetAddress.getByName(standard_ip_address));
         } catch (UnknownHostException e) {
             e.printStackTrace();
         } catch (IOException e) {
-            standard_ip_address = (String) get_ip_with_CIDR().keySet().toArray()[0];
-            Socket_Network.set_standard_ip_address(standard_ip_address);
+            standard_ip_address = (String) getIpWithCidr().keySet().toArray()[0];
+            SocketNetwork.setStandardIpAddress(standard_ip_address);
             ConfigurationFileManager.setConfiguredIpAddress(standard_ip_address);
             e.printStackTrace();
         }

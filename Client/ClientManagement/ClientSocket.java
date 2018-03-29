@@ -5,7 +5,7 @@ import java.net.Socket;
 import java.net.UnknownHostException;
 
 import Client.ConfigurationFileManager.ConfigurationFileManager;
-import General.Socket_Server_Super_Entertainment_Pi.*;
+import General.SocketNetwork.SocketNetwork;
 
 
 /**
@@ -13,7 +13,7 @@ import General.Socket_Server_Super_Entertainment_Pi.*;
  *
  * @author Simon, Dustin
  */
-class ClientSocket extends Socket_Network {
+class ClientSocket extends SocketNetwork {
 
     // the client socket
     Socket clientSocket;

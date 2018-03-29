@@ -8,7 +8,7 @@ import General.GeneralUse.GeneralDirectory;
 import General.GeneralUse.GeneralFile;
 import General.GeneralUse.GeneralPurpose;
 import General.GeneralUse.GeneralMedia;
-import General.Socket_Server_Super_Entertainment_Pi.Socket_Network;
+import General.SocketNetwork.SocketNetwork;
 import General.XML_Service_Super_Entertainment_Pi.XML_Manager;
 import General.XML_Service_Super_Entertainment_Pi.XML_Shell;
 import Server.Database.DatabaseManager;
@@ -329,7 +329,7 @@ public class Server_Service implements Runnable {
             int MIN_PORT_NUMBER = 14000;
             int bound_PORT = 7000;
 
-            possible_port_number = Socket_Network.determine_port_number(MAX_PORT_NUMBER, MIN_PORT_NUMBER, bound_PORT);
+            possible_port_number = SocketNetwork.determinePortNumber(MAX_PORT_NUMBER, MIN_PORT_NUMBER, bound_PORT);
 
 
             if (!(Server_Manager.get_List_of_used_upload_socket_ports().indexOf(possible_port_number) > -1)) {
@@ -351,7 +351,7 @@ public class Server_Service implements Runnable {
     private void do_upload(String new_file_path, int file_size) {
         try {
             int port_number_for_upload_socket = calc_port_number();
-            InetAddress bindAddr = InetAddress.getByName(Socket_Network.getIpAddress());
+            InetAddress bindAddr = InetAddress.getByName(SocketNetwork.getIpAddress());
             System.out.println("Port is " + port_number_for_upload_socket);
             send_message_to_client(this.connection_to_a_client, " <Message><Upload_Port>" + port_number_for_upload_socket + "</Upload_Port></Message> \r\n");
             ServerSocket upload = new ServerSocket(port_number_for_upload_socket, 50, bindAddr);

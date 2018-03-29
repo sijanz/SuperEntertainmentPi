@@ -3,7 +3,7 @@ package Client.ErrorScreen;
 import Client.ClientGUI.Controller;
 import Client.ClientManagement.ClientManager;
 import Client.ConfigurationFileManager.ConfigurationFileManager;
-import General.Socket_Server_Super_Entertainment_Pi.Socket_Network;
+import General.SocketNetwork.SocketNetwork;
 import javafx.fxml.FXML;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
@@ -61,8 +61,8 @@ public class NetworkNotAvailableErrorController extends Controller implements In
         System.out.println(host + " " + port);
 
         try {
-            Socket_Network.set_standard_port(Integer.parseInt(port));
-            Socket_Network.set_hostname(host);
+            SocketNetwork.setStandardPort(Integer.parseInt(port));
+            SocketNetwork.setHostname(host);
             ConfigurationFileManager.setInitialServerPort(port);
             ConfigurationFileManager.setInitialServerIpAddress(host);
             ClientManager.rebuildSocket();
